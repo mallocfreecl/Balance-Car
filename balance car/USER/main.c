@@ -15,7 +15,6 @@ int MOTOR1,MOTOR2;
 	 NVIC_PriorityGroupConfig(NVIC_PriorityGroup_2);//最好只在main函数中只进行一次分组
 	 delay_init();
 	 
-	 NVIC_PriorityGroupConfig(NVIC_PriorityGroup_2);//中断分组为2
 	
 
 	 while(1)

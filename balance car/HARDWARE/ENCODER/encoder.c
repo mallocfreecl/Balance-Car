@@ -15,13 +15,13 @@ void Encoder_TIM2_Init(void)
 	
 	//2、GPIO初始化
 	GPIO_InitStructure.GPIO_Pin=GPIO_Pin_0 |GPIO_Pin_1;    //PA0、PA1   TIM2的CH1和CH2
-  GPIO_InitStructure.GPIO_Mode=GPIO_Mode_IN_FLOATING;    //浮空输入  速度参数用不到
-  GPIO_Init(GPIOA, &GPIO_InitStructure);
+  	GPIO_InitStructure.GPIO_Mode=GPIO_Mode_IN_FLOATING;    //浮空输入  速度参数用不到
+  	GPIO_Init(GPIOA, &GPIO_InitStructure);
 	
 	//3、时基单元初始化
 	TIM_TimeBaseStructInit(&TIM_TimeBaseInitStructure);
-  TIM_TimeBaseInitStructure.TIM_Period=65536-1;//使用最大计数，方便u16转为s16时转化为负数
-  TIM_TimeBaseInitStructure.TIM_Prescaler=1-1; 
+  	TIM_TimeBaseInitStructure.TIM_Period=65536-1;//使用最大计数，方便u16转为s16时转化为负数
+  	TIM_TimeBaseInitStructure.TIM_Prescaler=1-1; 
 	TIM_TimeBaseInit(TIM2, &TIM_TimeBaseInitStructure);
 	
 	//4、输入捕获初始化
@@ -59,13 +59,13 @@ void Encoder_TIM4_Init(void)
 	
 	//2、GPIO初始化
 	GPIO_InitStructure.GPIO_Pin=GPIO_Pin_6 |GPIO_Pin_7;    //PA0、PA1   TIM2的CH1和CH2
-  GPIO_InitStructure.GPIO_Mode=GPIO_Mode_IN_FLOATING;    //浮空输入  速度参数用不到
-  GPIO_Init(GPIOB, &GPIO_InitStructure);
+  	GPIO_InitStructure.GPIO_Mode=GPIO_Mode_IN_FLOATING;    //浮空输入  速度参数用不到
+  	GPIO_Init(GPIOB, &GPIO_InitStructure);
 	
 	//3、时基单元初始化
 	TIM_TimeBaseStructInit(&TIM_TimeBaseInitStructure);
-  TIM_TimeBaseInitStructure.TIM_Period=65536-1;//10k频率下计10000次定时1s
-  TIM_TimeBaseInitStructure.TIM_Prescaler=1-1; 
+  	TIM_TimeBaseInitStructure.TIM_Period=65536-1;//10k频率下计10000次定时1s
+  	TIM_TimeBaseInitStructure.TIM_Prescaler=1-1; 
 	TIM_TimeBaseInit(TIM4, &TIM_TimeBaseInitStructure);
 	
 	//4、输入捕获初始化
