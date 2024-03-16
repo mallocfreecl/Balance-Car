@@ -1,7 +1,16 @@
 #ifndef __SYS_H
 #define __SYS_H	
 #include "stm32f10x.h"
-
+#include "delay.h"
+#include "usart.h"	
+#include "exti.h"
+#include "encoder.h"
+#include "pwm.h"
+#include "motor.h"
+#include "control.h"
+#include "mpu6050.h"
+#include "inv_mpu.h"
+#include "inv_mpu_dmp_motion_driver.h"
 
 //////////////////////////////////////////////////////////////////////////////////	 
 //本程序只供学习使用，未经作者许可，不得用于其它任何用途
@@ -70,13 +79,16 @@
 extern int PWM_MAX,PWM_MIN;
 extern int MOTOR1,MOTOR2;
 
+extern float Med_Angle; //机械中值  根据实际情况改变机械中值
+extern float Vertical_Kp,Vertical_Kd; //直立环Kp、Kd
+extern float Velocity_Kp,Velocity_Ki; //速度环Kp、Ki
 
-
+extern int vertical_out,velocity_out,Turn_out,PWM_out; //直立环输出、速度环输出、转向环
 
 //以下为汇编函数
 void WFI_SET(void);		//执行WFI指令
 void INTX_DISABLE(void);//关闭所有中断
 void INTX_ENABLE(void);	//开启所有中断
 void MSR_MSP(u32 addr);	//设置堆栈地址
-
+//void NVIC_Config(void)；
 #endif

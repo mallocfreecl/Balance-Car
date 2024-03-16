@@ -35,3 +35,18 @@ __asm void MSR_MSP(u32 addr)
     MSR MSP, r0 			//set Main Stack value
     BX r14
 }
+
+//void NVIC_Config(void)
+//{
+//	NVIC_PriorityGroupConfig(NVIC_PriorityGroup_2);//最好只在main函数中只进行一次分组
+//	
+//	//该代码也可直接放在EXTI.c的初始化函数中
+//	NVIC_InitTypeDef NVIC_InitStructure;        
+//  NVIC_InitStructure.NVIC_IRQChannel=EXTI9_5_IRQn;
+//  NVIC_InitStructure.NVIC_IRQChannelCmd=ENABLE;
+//  NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority=0;
+//  NVIC_InitStructure.NVIC_IRQChannelSubPriority=0;	 //外部中断优先级设为最高
+//	NVIC_Init(&NVIC_InitStructure);
+
+//  //串口1已在usart.c中进行了NVIC设置
+//}

@@ -29,5 +29,16 @@
 ..\obj\usart.o: ..\STM32F10x_FWLib\inc\stm32f10x_usart.h
 ..\obj\usart.o: ..\STM32F10x_FWLib\inc\stm32f10x_wwdg.h
 ..\obj\usart.o: ..\STM32F10x_FWLib\inc\misc.h
+..\obj\usart.o: ..\SYSTEM\delay\delay.h
+..\obj\usart.o: ..\SYSTEM\sys\sys.h
 ..\obj\usart.o: ..\SYSTEM\usart\usart.h
 ..\obj\usart.o: D:\keil\ARM\ARMCC\Bin\..\include\stdio.h
+..\obj\usart.o: ..\HARDWARE\EXTI\exti.h
+..\obj\usart.o: ..\HARDWARE\ENCODER\encoder.h
+..\obj\usart.o: ..\HARDWARE\PWM\pwm.h
+..\obj\usart.o: ..\HARDWARE\MOTOR\motor.h
+..\obj\usart.o: ..\HARDWARE\CONTROL\control.h
+..\obj\usart.o: ..\HARDWARE\MPU6050\mpu6050.h
+..\obj\usart.o: ..\HARDWARE\MPU6050\mpuiic.h
+..\obj\usart.o: ..\HARDWARE\MPU6050\eMPL\inv_mpu.h
+..\obj\usart.o: ..\HARDWARE\MPU6050\eMPL\inv_mpu_dmp_motion_driver.h
