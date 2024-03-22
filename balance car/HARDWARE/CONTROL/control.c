@@ -11,6 +11,7 @@ int Enconder_Left,Enconder_Right;
 //角度是相对于机械中值(Med_Angle)的角度  
 //Angle~A    A(r):当前角度    A(e):理想角度  A(e) == Med_Angle == 0
 //PD: 比例微分 直立环：对Y轴的角度进行PD控制
+//vertical_out = Kp*(A(r)-A(e))+Kd*( ( A(t)-A(e) ) - ( A(t-1)-A(e) ) )    //偏差的微分 两边的-A(e)可以消掉
 //vertical_out = Kp*(A(r)-A(e))+Kd*(A(t)-A(t-1))    (A(t)-A(t-1))的原因: (A(t)-A(t-1))/t  t取1(即使取1，Kd可以主动控制)  
 
 //入口参数：期望角度，真实角度(当前角度)，真实角速度(当前角速度)
@@ -35,7 +36,7 @@ int Velocity(int encoder_left,int encoder_right)  //入口参数可以优化一下
 	//1、计算编码器偏差
 	Encoder_Err = (encoder_left + encoder_right) - 0;//期望速度为0  舍去误差
 	
-	//2、对速度偏差进行低通滤波
+	//2、对速度偏差进行低通滤波         //??
 	EnC_Err_Lowout = (1-a)*Encoder_Err + a * EnC_Err_Lowout_Last;
 	EnC_Err_Lowout_Last = EnC_Err_Lowout;
 	
@@ -62,18 +63,18 @@ int Turn(int gyro_Z) //入口参数为Z轴角速度
 
 void EXTI9_5_IRQHandler(void) //检测到mpu6050的下降沿信号
 {
- if( EXTI_GetITStatus(EXTI_Line5) == SET) //不用此函数
+ if( EXTI_GetITStatus(EXTI_Line5) == SET) 
  {
-	 if(PBout(5) == 0) //检测到引脚电平为低
+	 if(PBout(5) == 0) //二次检测，检测到引脚电平为低
 	 {
-	  	EXTI_ClearITPendingBit(EXTI_Line5);//中断标志位清零
-	  	//1、采集编码器数据及MPU6050的数据
+	  EXTI_ClearITPendingBit(EXTI_Line5);//中断标志位清零
+	  //1、采集编码器数据及MPU6050的数据
 		Enconder_Left = - Get_Speed(2);
 		Enconder_Right = Get_Speed(4);
 		
 		mpu_dmp_get_data(&Pitch,&Roll,&Yaw);	
-        MPU_Get_Gyroscope(&gyrox,&gyroy,&gyroz);
-    	MPU_Get_Accelerometer(&aacx,&aacy,&aacz);
+		MPU_Get_Gyroscope(&gyrox,&gyroy,&gyroz);
+		MPU_Get_Accelerometer(&aacx,&aacy,&aacz);
 		
 		//2、将数据压入闭环控制，计算控制量
 		vertical_out = Vertical(Med_Angle,Pitch,gyroy);

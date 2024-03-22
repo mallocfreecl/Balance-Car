@@ -22,7 +22,7 @@ void PWM_TIM1_Init(u16 Per,u16 Psc)
 	
 	//3、初始化时基单元    时基单元默认使用内部时钟
 	//TIM_TimeBaseStructInit(&TIM_TimeBaseInitStructure);    //加不加都可以，因为所有参数都设置了
-	TIM_TimeBaseInitStructure.TIM_ClockDivision = TIM_CKD_DIV1;
+	TIM_TimeBaseInitStructure.TIM_ClockDivision = TIM_CKD_DIV1;//？？滤波采样频率
 	TIM_TimeBaseInitStructure.TIM_CounterMode = TIM_CounterMode_Up;
   TIM_TimeBaseInitStructure.TIM_Period = Per;
   TIM_TimeBaseInitStructure.TIM_Prescaler = Psc; 
@@ -31,7 +31,7 @@ void PWM_TIM1_Init(u16 Per,u16 Psc)
 	
 	//4、初始化输出比较
 	TIM_OCStructure.TIM_OCMode = TIM_OCMode_PWM1;
-	TIM_OCStructure.TIM_OCPolarity = TIM_OCPolarity_High;
+	TIM_OCStructure.TIM_OCPolarity = TIM_OCPolarity_High;    //低于比较值输出1，高于比较值输出0
 	TIM_OCStructure.TIM_OutputState = TIM_OutputState_Enable;
 	TIM_OCStructure.TIM_Pulse = 0;
 	TIM_OC1Init(TIM1, &TIM_OCStructure);

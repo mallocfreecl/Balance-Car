@@ -18,7 +18,7 @@ void MPU6050_Exti_Init(void)
   EXTI_InitTypeDef EXTI_InitStructure;
 	NVIC_InitTypeDef NVIC_InitStructure;  
 	
-	//1、开启GPIO与AFIO的时钟  AFIO常用于中断映射与重映射
+	//1、开启GPIOB与AFIO的时钟  AFIO常用于中断映射与重映射
 	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOB | RCC_APB2Periph_AFIO, ENABLE);
   
 	//2、GPIO初始化

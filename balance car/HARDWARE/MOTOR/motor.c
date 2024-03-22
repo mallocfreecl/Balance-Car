@@ -42,7 +42,7 @@ void Load(int motor1,int motor2)
 	
 	if(motor2 >= 0) {Bin1 = 1; Bin2 = 0;}
 	else            {Bin1 = 0; Bin2 = 1;}
-	TIM_SetCompare4(TIM1,GFP_abs(motor1));
+	TIM_SetCompare4(TIM1,GFP_abs(motor2));
 
 }
 

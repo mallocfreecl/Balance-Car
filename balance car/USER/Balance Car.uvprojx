@@ -49,7 +49,7 @@
             <InvalidFlash>1</InvalidFlash>
           </TargetStatus>
           <OutputDirectory>..\OBJ\</OutputDirectory>
-          <OutputName>template</OutputName>
+          <OutputName>Balance Car</OutputName>
           <CreateExecutable>1</CreateExecutable>
           <CreateLib>0</CreateLib>
           <CreateHexFile>1</CreateHexFile>
@@ -559,24 +559,9 @@
           <GroupName>HARDWARE</GroupName>
           <Files>
             <File>
-              <FileName>led.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\HARDWARE\LED\led.c</FilePath>
-            </File>
-            <File>
-              <FileName>key.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\HARDWARE\KEY\key.c</FilePath>
-            </File>
-            <File>
               <FileName>exti.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\HARDWARE\EXTI\exti.c</FilePath>
-            </File>
-            <File>
-              <FileName>timer.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\HARDWARE\TIMER\timer.c</FilePath>
             </File>
             <File>
               <FileName>encoder.c</FileName>
