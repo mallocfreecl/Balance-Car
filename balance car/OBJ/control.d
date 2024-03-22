@@ -34,6 +34,8 @@
 ..\obj\control.o: ..\SYSTEM\sys\sys.h
 ..\obj\control.o: ..\SYSTEM\usart\usart.h
 ..\obj\control.o: D:\keil\ARM\ARMCC\Bin\..\include\stdio.h
+..\obj\control.o: ..\HARDWARE\OLED\oled.h
+..\obj\control.o: D:\keil\ARM\ARMCC\Bin\..\include\stdlib.h
 ..\obj\control.o: ..\HARDWARE\EXTI\exti.h
 ..\obj\control.o: ..\HARDWARE\ENCODER\encoder.h
 ..\obj\control.o: ..\HARDWARE\PWM\pwm.h

@@ -3,6 +3,7 @@
 #include "stm32f10x.h"
 #include "delay.h"
 #include "usart.h"	
+#include "oled.h"
 #include "exti.h"
 #include "encoder.h"
 #include "pwm.h"
@@ -79,9 +80,11 @@
 extern int PWM_MAX,PWM_MIN;
 extern int MOTOR1,MOTOR2;
 
-extern float Med_Angle; //机械中值  根据实际情况改变机械中值
-extern float Vertical_Kp,Vertical_Kd; //直立环Kp、Kd
-extern float Velocity_Kp,Velocity_Ki; //速度环Kp、Ki
+extern float Pitch,Roll,Yaw;	   //角度
+extern short gyrox,gyroy,gyroz; //角速度
+extern short aacx,aacy,aacz;    //加速度
+
+extern int Enconder_Left,Enconder_Right;
 
 extern int vertical_out,velocity_out,Turn_out,PWM_out; //直立环输出、速度环输出、转向环
 

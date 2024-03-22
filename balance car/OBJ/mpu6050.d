@@ -35,6 +35,8 @@
 ..\obj\mpu6050.o: ..\SYSTEM\sys\sys.h
 ..\obj\mpu6050.o: ..\SYSTEM\usart\usart.h
 ..\obj\mpu6050.o: D:\keil\ARM\ARMCC\Bin\..\include\stdio.h
+..\obj\mpu6050.o: ..\HARDWARE\OLED\oled.h
+..\obj\mpu6050.o: D:\keil\ARM\ARMCC\Bin\..\include\stdlib.h
 ..\obj\mpu6050.o: ..\HARDWARE\EXTI\exti.h
 ..\obj\mpu6050.o: ..\HARDWARE\ENCODER\encoder.h
 ..\obj\mpu6050.o: ..\HARDWARE\PWM\pwm.h

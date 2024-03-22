@@ -34,6 +34,8 @@
 ..\obj\mpuiic.o: ..\SYSTEM\sys\sys.h
 ..\obj\mpuiic.o: ..\SYSTEM\usart\usart.h
 ..\obj\mpuiic.o: D:\keil\ARM\ARMCC\Bin\..\include\stdio.h
+..\obj\mpuiic.o: ..\HARDWARE\OLED\oled.h
+..\obj\mpuiic.o: D:\keil\ARM\ARMCC\Bin\..\include\stdlib.h
 ..\obj\mpuiic.o: ..\HARDWARE\EXTI\exti.h
 ..\obj\mpuiic.o: ..\HARDWARE\ENCODER\encoder.h
 ..\obj\mpuiic.o: ..\HARDWARE\PWM\pwm.h

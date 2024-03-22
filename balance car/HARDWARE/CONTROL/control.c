@@ -1,12 +1,12 @@
 #include "control.h"
 
-float Pitch,Roll,Yaw;	   //角度
-short gyrox,gyroy,gyroz; //角速度
-short aacx,aacy,aacz;    //加速度
+//该程序默认机械中值为0
+float Med_Angle = 0; //机械中值  根据实际情况改变机械中值
+float Vertical_Kp,Vertical_Kd; //直立环Kp、Kd
+float Velocity_Kp,Velocity_Ki; //速度环Kp、Ki
+float Turn_Kp;
 
-int Enconder_Left,Enconder_Right;
-
-
+int vertical_out,velocity_out,Turn_out,PWM_out; //直立环输出、速度环输出、转向环
 
 //角度是相对于机械中值(Med_Angle)的角度  
 //Angle~A    A(r):当前角度    A(e):理想角度  A(e) == Med_Angle == 0
@@ -20,7 +20,7 @@ int Enconder_Left,Enconder_Right;
 int Vertical(float Med,float Angle,float gyro_Y)  //入口参数可以优化一下
 {
 	int PWM_out;
-	PWM_out = Vertical_Kp * Angle + Vertical_Kd * gyro_Y; //？？这里的float*float 是什么类型 int = float可以像想象的正常转换吗？
+	PWM_out = Vertical_Kp * Angle + Vertical_Kd * gyro_Y; //这里的float*float 是float类型,强转为int时会舍弃小数
 	return PWM_out;
 }
 
@@ -30,7 +30,7 @@ int Vertical(float Med,float Angle,float gyro_Y)  //入口参数可以优化一下
 int Velocity(int encoder_left,int encoder_right)  //入口参数可以优化一下
 {
 	//对PWM输出、编码器偏差、低通滤波输出、低通滤波输出的积分、对本次低通滤波输出进行记录  低通滤波系数进行定义
-	static int PWM_out, Encoder_Err, EnC_Err_Lowout, EnC_Err_Lowout_S, EnC_Err_Lowout_Last = 0;//EnC_Err_Lowout_Last起初初始化为0 初不初始化都可以，因为后面的值会覆盖
+	static int PWM_out, Encoder_Err, EnC_Err_Lowout, EnC_Err_Lowout_S, EnC_Err_Lowout_Last;//EnC_Err_Lowout_Last起初可以初始化为0 初不初始化都可以，因为后面的值会覆盖
 	float a = 0.7;
 	
 	//1、计算编码器偏差
@@ -56,7 +56,7 @@ int Velocity(int encoder_left,int encoder_right)  //入口参数可以优化一下
 int Turn(int gyro_Z) //入口参数为Z轴角速度
 {
 	int PWM_out;
-	PWM_out = (-0.5) * gyro_Z;
+	PWM_out = (-Turn_Kp) * gyro_Z;
 	return PWM_out;
 
 }

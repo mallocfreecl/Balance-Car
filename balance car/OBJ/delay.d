@@ -34,6 +34,8 @@
 ..\obj\delay.o: ..\SYSTEM\usart\usart.h
 ..\obj\delay.o: D:\keil\ARM\ARMCC\Bin\..\include\stdio.h
 ..\obj\delay.o: ..\SYSTEM\sys\sys.h
+..\obj\delay.o: ..\HARDWARE\OLED\oled.h
+..\obj\delay.o: D:\keil\ARM\ARMCC\Bin\..\include\stdlib.h
 ..\obj\delay.o: ..\HARDWARE\EXTI\exti.h
 ..\obj\delay.o: ..\HARDWARE\ENCODER\encoder.h
 ..\obj\delay.o: ..\HARDWARE\PWM\pwm.h

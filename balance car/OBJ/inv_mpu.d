@@ -40,6 +40,7 @@
 ..\obj\inv_mpu.o: ..\SYSTEM\delay\delay.h
 ..\obj\inv_mpu.o: ..\SYSTEM\sys\sys.h
 ..\obj\inv_mpu.o: ..\SYSTEM\usart\usart.h
+..\obj\inv_mpu.o: ..\HARDWARE\OLED\oled.h
 ..\obj\inv_mpu.o: ..\HARDWARE\EXTI\exti.h
 ..\obj\inv_mpu.o: ..\HARDWARE\ENCODER\encoder.h
 ..\obj\inv_mpu.o: ..\HARDWARE\PWM\pwm.h

@@ -1,11 +1,12 @@
 #include "sys.h"
 
-float Med_Angle = 0; //机械中值  根据实际情况改变机械中值
-float Vertical_Kp,Vertical_Kd; //直立环Kp、Kd
-float Velocity_Kp,Velocity_Ki; //速度环Kp、Ki
 
-int vertical_out,velocity_out,Turn_out,PWM_out; //直立环输出、速度环输出、转向环
+//该程序默认机械中值为0
+float Pitch,Roll,Yaw;	   //角度
+short gyrox,gyroy,gyroz; //角速度
+short aacx,aacy,aacz;    //加速度
 
+int Enconder_Left,Enconder_Right;
 
 int PWM_MAX=7200,PWM_MIN=-7200;
 int MOTOR1,MOTOR2;
@@ -14,12 +15,25 @@ int MOTOR1,MOTOR2;
  {
 	 NVIC_PriorityGroupConfig(NVIC_PriorityGroup_2);//最好只在main函数中只进行一次分组
 	 delay_init();
+	 uart_init(115200);
 	 
+	 OLED_Init();
+	 OLED_Clear();
 	
-
+	 MPU_Init();
+	 mpu_dmp_init();
+	 MPU6050_Exti_Init();
+	 
+	 Encoder_TIM2_Init();
+	 Encoder_TIM4_Init();
+	 Motor_Init();
+   PWM_TIM1_Init(0,7199);
+	
 	 while(1)
 	 {
-	   
+	  OLED_Float(0,0,Pitch,1);
+		OLED_Float(50,50,velocity_out,1);
+//		OLED_ShowNumber(30,0,Velocity_out,3,16);//OK
 	 }
 
  }

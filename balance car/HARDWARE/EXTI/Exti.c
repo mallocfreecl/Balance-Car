@@ -10,7 +10,7 @@
 //6.中断服务函数(函数名字可在启动文件中找到)
 
 
-//使用外部中断5  GPIO:PB5  下降沿触发   NVIC的设置与开启放到主函数里
+//使用外部中断5  GPIO:PB5  下降沿触发   NVIC的设置与开启也可单独放到一个函数里，方便配置整个工程的优先级
 void MPU6050_Exti_Init(void)
 {
 	//定义结构体
@@ -23,7 +23,7 @@ void MPU6050_Exti_Init(void)
   
 	//2、GPIO初始化
 	GPIO_InitStructure.GPIO_Pin=GPIO_Pin_5;        //PB5
-  GPIO_InitStructure.GPIO_Mode=GPIO_Mode_IPU;    //上拉输入，因为是检测下降沿  速度参数用不到
+  GPIO_InitStructure.GPIO_Mode=GPIO_Mode_IPU;    //上拉输入，因为是检测下降沿  速度参数用不到，不需配置
   GPIO_Init(GPIOB, &GPIO_InitStructure);
 	
 	//3、配置AFIO，设置中断通道(利用AFIO设置中断通道)
@@ -32,7 +32,7 @@ void MPU6050_Exti_Init(void)
 	//4、初始化中断(exti)
 	EXTI_InitStructure.EXTI_Line=EXTI_Line5;
 	EXTI_InitStructure.EXTI_LineCmd=ENABLE;
-	EXTI_InitStructure.EXTI_Mode=EXTI_Mode_Interrupt;//中断触发
+	EXTI_InitStructure.EXTI_Mode=EXTI_Mode_Interrupt;    //中断触发
 	EXTI_InitStructure.EXTI_Trigger=EXTI_Trigger_Falling;//下降沿触发
   EXTI_Init(&EXTI_InitStructure);
 	
@@ -40,10 +40,10 @@ void MPU6050_Exti_Init(void)
   NVIC_InitStructure.NVIC_IRQChannel=EXTI9_5_IRQn;
   NVIC_InitStructure.NVIC_IRQChannelCmd=ENABLE;
   NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority=0;
-  NVIC_InitStructure.NVIC_IRQChannelSubPriority=0;	 //外部中断优先级设为最高，该中断不可被打断
+  NVIC_InitStructure.NVIC_IRQChannelSubPriority=0;	   //外部中断优先级设为最高，该中断不可被打断
 	NVIC_Init(&NVIC_InitStructure);
 }
 
 
-
+//中断服务函数放在了control.c中
 		

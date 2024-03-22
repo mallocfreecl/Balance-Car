@@ -41,6 +41,7 @@
 ..\obj\inv_mpu_dmp_motion_driver.o: ..\SYSTEM\delay\delay.h
 ..\obj\inv_mpu_dmp_motion_driver.o: ..\SYSTEM\sys\sys.h
 ..\obj\inv_mpu_dmp_motion_driver.o: ..\SYSTEM\usart\usart.h
+..\obj\inv_mpu_dmp_motion_driver.o: ..\HARDWARE\OLED\oled.h
 ..\obj\inv_mpu_dmp_motion_driver.o: ..\HARDWARE\EXTI\exti.h
 ..\obj\inv_mpu_dmp_motion_driver.o: ..\HARDWARE\ENCODER\encoder.h
 ..\obj\inv_mpu_dmp_motion_driver.o: ..\HARDWARE\PWM\pwm.h

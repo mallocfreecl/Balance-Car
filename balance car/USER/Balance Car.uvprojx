@@ -339,7 +339,7 @@
               <MiscControls></MiscControls>
               <Define>STM32F10X_HD,USE_STDPERIPH_DRIVER</Define>
               <Undefine></Undefine>
-              <IncludePath>..\USER;..\CORE;..\STM32F10x_FWLib\inc;..\SYSTEM\delay;..\SYSTEM\sys;..\SYSTEM\usart;..\HARDWARE\LED;..\HARDWARE\KEY;..\HARDWARE\BEEP;..\HARDWARE\EXTI;..\HARDWARE\IWDG;..\HARDWARE\WWDG;..\HARDWARE\TIMER;..\HARDWARE\MPU6050;..\HARDWARE\MPU6050\eMPL;..\HARDWARE\ENCODER;..\HARDWARE\PWM;..\HARDWARE\MOTOR;..\HARDWARE\CONTROL</IncludePath>
+              <IncludePath>..\USER;..\CORE;..\STM32F10x_FWLib\inc;..\SYSTEM\delay;..\SYSTEM\sys;..\SYSTEM\usart;..\HARDWARE\LED;..\HARDWARE\KEY;..\HARDWARE\BEEP;..\HARDWARE\EXTI;..\HARDWARE\IWDG;..\HARDWARE\WWDG;..\HARDWARE\TIMER;..\HARDWARE\MPU6050;..\HARDWARE\MPU6050\eMPL;..\HARDWARE\ENCODER;..\HARDWARE\PWM;..\HARDWARE\MOTOR;..\HARDWARE\CONTROL;..\HARDWARE\OLED</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>

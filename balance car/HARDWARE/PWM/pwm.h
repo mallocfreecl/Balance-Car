@@ -3,7 +3,7 @@
 #include "sys.h"
 //º¯ÊýÉùÃ÷
 
-void PWM_TIM1_Init(u16 Per,u16 Psc);
+void PWM_TIM1_Init(u16 Psc,u16 Per);
 
 
 #endif

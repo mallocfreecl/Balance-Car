@@ -88,38 +88,38 @@ void MPU_IIC_NAck(void)
 //0，无应答			  
 void MPU_IIC_Send_Byte(u8 txd)
 {                        
-    u8 t;   
+	u8 t;   
 	MPU_SDA_OUT(); 	    
-    MPU_IIC_SCL=0;//拉低时钟开始数据传输
-    for(t=0;t<8;t++)
-    {              
-        MPU_IIC_SDA=(txd&0x80)>>7;
-        txd<<=1; 	  
+  MPU_IIC_SCL=0;//拉低时钟开始数据传输
+  for(t=0;t<8;t++)
+  {              
+		MPU_IIC_SDA=(txd&0x80)>>7;
+    txd<<=1; 	  
 		MPU_IIC_SCL=1;
 		MPU_IIC_Delay(); 
 		MPU_IIC_SCL=0;	
 		MPU_IIC_Delay();
-    }	 
+  }	 
 } 	    
 //读1个字节，ack=1时，发送ACK，ack=0，发送nACK   
 u8 MPU_IIC_Read_Byte(unsigned char ack)
 {
 	unsigned char i,receive=0;
 	MPU_SDA_IN();//SDA设置为输入
-    for(i=0;i<8;i++ )
+  for(i=0;i<8;i++ )
 	{
-        MPU_IIC_SCL=0; 
-        MPU_IIC_Delay();
+    MPU_IIC_SCL=0; 
+    MPU_IIC_Delay();
 		MPU_IIC_SCL=1;
-        receive<<=1;
-        if(MPU_READ_SDA)receive++;   
+    receive<<=1;
+    if(MPU_READ_SDA)receive++;   
 		MPU_IIC_Delay(); 
-    }					 
-    if (!ack)
-        MPU_IIC_NAck();//发送nACK
-    else
-        MPU_IIC_Ack(); //发送ACK   
-    return receive;
+  }					 
+  if (!ack)
+		MPU_IIC_NAck();//发送nACK
+  else
+    MPU_IIC_Ack(); //发送ACK   
+  return receive;
 }
 
 

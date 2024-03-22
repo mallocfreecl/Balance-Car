@@ -64,7 +64,7 @@ void Encoder_TIM4_Init(void)
 	
 	//3、时基单元初始化
 	TIM_TimeBaseStructInit(&TIM_TimeBaseInitStructure);
-  TIM_TimeBaseInitStructure.TIM_Period=65536-1;//10k频率下计10000次定时1s
+  TIM_TimeBaseInitStructure.TIM_Period=65536-1;      //10k频率下计10000次定时1s
   TIM_TimeBaseInitStructure.TIM_Prescaler=1-1; 
 	TIM_TimeBaseInit(TIM4, &TIM_TimeBaseInitStructure);
 	

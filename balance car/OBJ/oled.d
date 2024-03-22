@@ -34,6 +34,7 @@
 ..\obj\oled.o: ..\SYSTEM\sys\sys.h
 ..\obj\oled.o: ..\SYSTEM\usart\usart.h
 ..\obj\oled.o: D:\keil\ARM\ARMCC\Bin\..\include\stdio.h
+..\obj\oled.o: ..\HARDWARE\OLED\oled.h
 ..\obj\oled.o: ..\HARDWARE\EXTI\exti.h
 ..\obj\oled.o: ..\HARDWARE\ENCODER\encoder.h
 ..\obj\oled.o: ..\HARDWARE\PWM\pwm.h

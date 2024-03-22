@@ -34,6 +34,8 @@
 ..\obj\motor.o: ..\SYSTEM\sys\sys.h
 ..\obj\motor.o: ..\SYSTEM\usart\usart.h
 ..\obj\motor.o: D:\keil\ARM\ARMCC\Bin\..\include\stdio.h
+..\obj\motor.o: ..\HARDWARE\OLED\oled.h
+..\obj\motor.o: D:\keil\ARM\ARMCC\Bin\..\include\stdlib.h
 ..\obj\motor.o: ..\HARDWARE\EXTI\exti.h
 ..\obj\motor.o: ..\HARDWARE\ENCODER\encoder.h
 ..\obj\motor.o: ..\HARDWARE\PWM\pwm.h

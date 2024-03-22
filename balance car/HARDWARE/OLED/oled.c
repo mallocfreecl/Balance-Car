@@ -54,7 +54,7 @@ void OLED_IIC_Start()
 **********************************************/
 void OLED_IIC_Stop()
 {
-OLED_SCLK_Set() ;
+	OLED_SCLK_Set() ;
 //	OLED_SCLK_Clr();
 	OLED_SDIN_Clr();
 	OLED_SDIN_Set();
@@ -185,8 +185,9 @@ void Delay_1ms(unsigned int Del_1ms)
 
 //×ø±êÉèÖÃ
 
-	void OLED_Set_Pos(unsigned char x, unsigned char y) 
-{ 	OLED_WR_Byte(0xb0+y,OLED_CMD);
+void OLED_Set_Pos(unsigned char x, unsigned char y) 
+{ 	
+	OLED_WR_Byte(0xb0+y,OLED_CMD);
 	OLED_WR_Byte(((x&0xf0)>>4)|0x10,OLED_CMD);
 	OLED_WR_Byte((x&0x0f),OLED_CMD); 
 }   	  
