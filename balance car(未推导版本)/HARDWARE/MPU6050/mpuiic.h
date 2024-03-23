@@ -15,17 +15,31 @@
 //////////////////////////////////////////////////////////////////////////////////
 	   		   
 //IO方向设置
-#define MPU_SDA_IN()   {GPIOB->CRL&=0XFFFF0FFF;GPIOB->CRL|=8<<12;}
-#define MPU_SDA_OUT()  {GPIOB->CRL&=0XFFFF0FFF;GPIOB->CRL|=3<<12;}
+
+//GPIO的CR寄存器，用于配置GPIO的模式与输出速度，4个位决定一个GPIO.x的模式
+//CRL(32位)决定GPIO.0-GPIO.7这8个端口的模式  CRH(32位)决定GPIO.8-GPIO.15这8个端口的模式
+//1.现将4位清零  2.设置对应的模式  
+
+
+#define MPU_SDA_IN()   {GPIOB->CRL&=0X0FFFFFFF;GPIOB->CRL|=8<<28;}
+#define MPU_SDA_OUT()  {GPIOB->CRL&=0X0FFFFFFF;GPIOB->CRL|=3<<28;}
+
+
+//#define MPU_SDA_IN()   {GPIOB->CRL&=0XFFFF0FFF;GPIOB->CRL|=8<<12;}
+//#define MPU_SDA_OUT()  {GPIOB->CRL&=0XFFFF0FFF;GPIOB->CRL|=3<<12;}
 
 
 //#define SDA_IN()  {GPIOB->CRH&=0XFFFFFF0F;GPIOB->CRH|=8<<4;}
 //#define SDA_OUT() {GPIOB->CRH&=0XFFFFFF0F;GPIOB->CRH|=3<<4;}
 
 //IO操作函数	 
-#define MPU_IIC_SCL     PBout(4) //SCL
-#define MPU_IIC_SDA     PBout(3) //SDA	
-#define MPU_READ_SDA   	PBin(3) //SDA	
+#define MPU_IIC_SCL     PBout(6) 
+#define MPU_IIC_SDA     PBout(7) 
+#define MPU_READ_SDA   	PBin(7) 
+
+//#define MPU_IIC_SCL     PBout(4) 
+//#define MPU_IIC_SDA     PBout(3) 
+//#define MPU_READ_SDA   	PBin(3) 
 
 //#define IIC_SCL    PBout(8) //SCL
 //#define IIC_SDA    PBout(9) //SDA	 

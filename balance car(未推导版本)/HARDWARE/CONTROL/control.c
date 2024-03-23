@@ -47,7 +47,7 @@ int Velocity(int target_speed,int encoder_left,int encoder_right)  //Èë¿Ú²ÎÊý¿ÉÒ
 	EnC_Err_Lowout_S += EnC_Err_Lowout;
 	
 	//4¡¢¶ÔËÙ¶ÈÆ«²îµÍÍ¨ÂË²¨»ý·Ö½øÐÐÏÞ·ù  ÎªÊ²Ã´ÊÇ10000£¿£¿
-	EnC_Err_Lowout_S = EnC_Err_Lowout_S >= 10000 ? EnC_Err_Lowout_S :(EnC_Err_Lowout_S <= -10000 ? (-10000) : EnC_Err_Lowout_S);
+	EnC_Err_Lowout_S = EnC_Err_Lowout_S >= 10000 ? 10000 :(EnC_Err_Lowout_S <= -10000 ? (-10000) : EnC_Err_Lowout_S);
 	
 	//5¡¢ËÙ¶È»·¿ØÖÆÊä³ö
 	PWM_out = Velocity_Kp * EnC_Err_Lowout + Velocity_Ki * EnC_Err_Lowout_S;
@@ -72,8 +72,8 @@ void EXTI9_5_IRQHandler(void) //¼ì²âµ½mpu6050µÄÏÂ½µÑØÐÅºÅ
 	 {
 	  EXTI_ClearITPendingBit(EXTI_Line5);//ÖÐ¶Ï±êÖ¾Î»ÇåÁã
 	  //1¡¢²É¼¯±àÂëÆ÷Êý¾Ý¼°MPU6050µÄÊý¾Ý
-		Enconder_Left = - Get_Speed(2);
-		Enconder_Right = Get_Speed(4);
+		Enconder_Left = - Get_Speed(2);  //½ÓµÄÊÇA±àÂëÆ÷½Ó¿Ú
+		Enconder_Right = Get_Speed(3);   //½ÓµÄÊÇB±àÂëÆ÷½Ó¿Ú
 		
 		mpu_dmp_get_data(&Pitch,&Roll,&Yaw);	
 		MPU_Get_Gyroscope(&gyrox,&gyroy,&gyroz);
@@ -81,8 +81,8 @@ void EXTI9_5_IRQHandler(void) //¼ì²âµ½mpu6050µÄÏÂ½µÑØÐÅºÅ
 		
 		//2¡¢½«Êý¾ÝÑ¹Èë±Õ»·¿ØÖÆ£¬¼ÆËã¿ØÖÆÁ¿
 		
-		velocity_out = Velocity(Target_Speed,Enconder_Left,Enconder_Right);
-		vertical_out = Vertical(velocity_out+Med_Angle,Pitch,gyroy);
+		velocity_out = Velocity(Target_Speed,Enconder_Left,Enconder_Right); //ËÙ¶È»·  Íâ»·
+		vertical_out = Vertical(velocity_out+Med_Angle,Pitch,gyroy);        //Ö±Á¢»·  ÄÚ»·
 		Turn_out = Turn(gyroz);
 		PWM_out = vertical_out;
 		 

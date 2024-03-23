@@ -16,16 +16,16 @@ void PWM_TIM1_Init(u16 Psc,u16 Per)
 	
 	//2、初始化GPIO
 	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_8 |GPIO_Pin_11;     //PA8、PA11   TIM1的CH1和CH4
-  GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF_PP;            //复用推挽输出
+	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF_PP;            //复用推挽输出
 	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
-  GPIO_Init(GPIOA, &GPIO_InitStructure);
+	GPIO_Init(GPIOA, &GPIO_InitStructure);
 	
 	//3、初始化时基单元    时基单元默认使用内部时钟
 	//TIM_TimeBaseStructInit(&TIM_TimeBaseInitStructure);      //加不加都可以，因为所有参数都设置了
 	TIM_TimeBaseInitStructure.TIM_ClockDivision = TIM_CKD_DIV1;//滤波采样频率  输出比较用不到该参数，也可以不写
 	TIM_TimeBaseInitStructure.TIM_CounterMode = TIM_CounterMode_Up;
-  TIM_TimeBaseInitStructure.TIM_Period = Per;
-  TIM_TimeBaseInitStructure.TIM_Prescaler = Psc; 
+	TIM_TimeBaseInitStructure.TIM_Period = Per;
+	TIM_TimeBaseInitStructure.TIM_Prescaler = Psc; 
 	TIM_TimeBaseInitStructure.TIM_RepetitionCounter = 0;       //高级定时器的重复计数器设置为0
 	TIM_TimeBaseInit(TIM1, &TIM_TimeBaseInitStructure);
 	

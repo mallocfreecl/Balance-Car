@@ -4,11 +4,11 @@
 
 
 //单片机给电机驱动模块的信号，控制两个电机正反转
-#define Ain1 PBout(14)   //根据硬件接线改变
-#define Ain2 PBout(15)
+#define Ain1 PBout(13)    //A电机的控制线
+#define Ain2 PBout(12)
 
-#define Bin1 PBout(13)
-#define Bin2 PBout(12)
+#define Bin1 PBout(15)    //B电机的控制线
+#define Bin2 PBout(14)
 
 void Motor_Init(void);
 void Limit(int* MOTORA,int* MOTORB);

@@ -1,5 +1,5 @@
 Dependencies for Project 'Balance Car', Target 'Balance Car': (DO NOT MODIFY !)
-F (.\main.c)(0x65FE3226)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I..\USER -I..\CORE -I..\STM32F10x_FWLib\inc -I..\SYSTEM\delay -I..\SYSTEM\sys -I..\SYSTEM\usart -I..\HARDWARE\LED -I..\HARDWARE\KEY -I..\HARDWARE\BEEP -I..\HARDWARE\EXTI -I..\HARDWARE\IWDG -I..\HARDWARE\WWDG -I..\HARDWARE\TIMER -I..\HARDWARE\MPU6050 -I..\HARDWARE\MPU6050\eMPL -I..\HARDWARE\ENCODER -I..\HARDWARE\PWM -I..\HARDWARE\MOTOR -I..\HARDWARE\CONTROL -I..\HARDWARE\OLED-I "E:\桌面文件\Balance-Car\balance car(未推导版本)\USER\RTE"-I C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\1.0.5\Device\Include-I C:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="514" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\obj\main.o --omf_browse ..\obj\main.crf --depend ..\obj\main.d)
+F (.\main.c)(0x65FECCB2)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I..\USER -I..\CORE -I..\STM32F10x_FWLib\inc -I..\SYSTEM\delay -I..\SYSTEM\sys -I..\SYSTEM\usart -I..\HARDWARE\LED -I..\HARDWARE\KEY -I..\HARDWARE\BEEP -I..\HARDWARE\EXTI -I..\HARDWARE\IWDG -I..\HARDWARE\WWDG -I..\HARDWARE\TIMER -I..\HARDWARE\MPU6050 -I..\HARDWARE\MPU6050\eMPL -I..\HARDWARE\ENCODER -I..\HARDWARE\PWM -I..\HARDWARE\MOTOR -I..\HARDWARE\CONTROL -I..\HARDWARE\OLED-I "E:\桌面文件\Balance-Car\balance car(未推导版本)\USER\RTE"-I C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\1.0.5\Device\Include-I C:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="514" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\obj\main.o --omf_browse ..\obj\main.crf --depend ..\obj\main.d)
 I (..\SYSTEM\sys\sys.h)(0x65FE3226)
 I (..\USER\stm32f10x.h)(0x65FE3226)
 I (..\CORE\core_cm3.h)(0x65FE3226)
@@ -35,12 +35,12 @@ I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5475F300)
 I (..\HARDWARE\OLED\oled.h)(0x65FE3226)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5475F300)
 I (..\HARDWARE\EXTI\exti.h)(0x65FE3226)
-I (..\HARDWARE\ENCODER\encoder.h)(0x65FE3226)
+I (..\HARDWARE\ENCODER\encoder.h)(0x65FECD9D)
 I (..\HARDWARE\PWM\pwm.h)(0x65FE3226)
-I (..\HARDWARE\MOTOR\motor.h)(0x65FE3226)
+I (..\HARDWARE\MOTOR\motor.h)(0x65FEE121)
 I (..\HARDWARE\CONTROL\control.h)(0x65FE4A23)
 I (..\HARDWARE\MPU6050\mpu6050.h)(0x65FE3226)
-I (..\HARDWARE\MPU6050\mpuiic.h)(0x65FE3226)
+I (..\HARDWARE\MPU6050\mpuiic.h)(0x65FED6A2)
 I (..\HARDWARE\MPU6050\eMPL\inv_mpu.h)(0x65FE3226)
 I (..\HARDWARE\MPU6050\eMPL\inv_mpu_dmp_motion_driver.h)(0x65FE3226)
 F (.\stm32f10x_it.c)(0x65FE3226)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I..\USER -I..\CORE -I..\STM32F10x_FWLib\inc -I..\SYSTEM\delay -I..\SYSTEM\sys -I..\SYSTEM\usart -I..\HARDWARE\LED -I..\HARDWARE\KEY -I..\HARDWARE\BEEP -I..\HARDWARE\EXTI -I..\HARDWARE\IWDG -I..\HARDWARE\WWDG -I..\HARDWARE\TIMER -I..\HARDWARE\MPU6050 -I..\HARDWARE\MPU6050\eMPL -I..\HARDWARE\ENCODER -I..\HARDWARE\PWM -I..\HARDWARE\MOTOR -I..\HARDWARE\CONTROL -I..\HARDWARE\OLED-I "E:\桌面文件\Balance-Car\balance car(未推导版本)\USER\RTE"-I C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\1.0.5\Device\Include-I C:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="514" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\obj\stm32f10x_it.o --omf_browse ..\obj\stm32f10x_it.crf --depend ..\obj\stm32f10x_it.d)
@@ -810,12 +810,12 @@ I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5475F300)
 I (..\HARDWARE\OLED\oled.h)(0x65FE3226)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5475F300)
 I (..\HARDWARE\EXTI\exti.h)(0x65FE3226)
-I (..\HARDWARE\ENCODER\encoder.h)(0x65FE3226)
+I (..\HARDWARE\ENCODER\encoder.h)(0x65FECD9D)
 I (..\HARDWARE\PWM\pwm.h)(0x65FE3226)
-I (..\HARDWARE\MOTOR\motor.h)(0x65FE3226)
+I (..\HARDWARE\MOTOR\motor.h)(0x65FEE121)
 I (..\HARDWARE\CONTROL\control.h)(0x65FE4A23)
 I (..\HARDWARE\MPU6050\mpu6050.h)(0x65FE3226)
-I (..\HARDWARE\MPU6050\mpuiic.h)(0x65FE3226)
+I (..\HARDWARE\MPU6050\mpuiic.h)(0x65FED6A2)
 I (..\HARDWARE\MPU6050\eMPL\inv_mpu.h)(0x65FE3226)
 I (..\HARDWARE\MPU6050\eMPL\inv_mpu_dmp_motion_driver.h)(0x65FE3226)
 F (..\SYSTEM\sys\sys.c)(0x65FE3226)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I..\USER -I..\CORE -I..\STM32F10x_FWLib\inc -I..\SYSTEM\delay -I..\SYSTEM\sys -I..\SYSTEM\usart -I..\HARDWARE\LED -I..\HARDWARE\KEY -I..\HARDWARE\BEEP -I..\HARDWARE\EXTI -I..\HARDWARE\IWDG -I..\HARDWARE\WWDG -I..\HARDWARE\TIMER -I..\HARDWARE\MPU6050 -I..\HARDWARE\MPU6050\eMPL -I..\HARDWARE\ENCODER -I..\HARDWARE\PWM -I..\HARDWARE\MOTOR -I..\HARDWARE\CONTROL -I..\HARDWARE\OLED-I "E:\桌面文件\Balance-Car\balance car(未推导版本)\USER\RTE"-I C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\1.0.5\Device\Include-I C:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="514" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\obj\sys.o --omf_browse ..\obj\sys.crf --depend ..\obj\sys.d)
@@ -854,12 +854,12 @@ I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5475F300)
 I (..\HARDWARE\OLED\oled.h)(0x65FE3226)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5475F300)
 I (..\HARDWARE\EXTI\exti.h)(0x65FE3226)
-I (..\HARDWARE\ENCODER\encoder.h)(0x65FE3226)
+I (..\HARDWARE\ENCODER\encoder.h)(0x65FECD9D)
 I (..\HARDWARE\PWM\pwm.h)(0x65FE3226)
-I (..\HARDWARE\MOTOR\motor.h)(0x65FE3226)
+I (..\HARDWARE\MOTOR\motor.h)(0x65FEE121)
 I (..\HARDWARE\CONTROL\control.h)(0x65FE4A23)
 I (..\HARDWARE\MPU6050\mpu6050.h)(0x65FE3226)
-I (..\HARDWARE\MPU6050\mpuiic.h)(0x65FE3226)
+I (..\HARDWARE\MPU6050\mpuiic.h)(0x65FED6A2)
 I (..\HARDWARE\MPU6050\eMPL\inv_mpu.h)(0x65FE3226)
 I (..\HARDWARE\MPU6050\eMPL\inv_mpu_dmp_motion_driver.h)(0x65FE3226)
 F (..\SYSTEM\usart\usart.c)(0x65FE3226)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I..\USER -I..\CORE -I..\STM32F10x_FWLib\inc -I..\SYSTEM\delay -I..\SYSTEM\sys -I..\SYSTEM\usart -I..\HARDWARE\LED -I..\HARDWARE\KEY -I..\HARDWARE\BEEP -I..\HARDWARE\EXTI -I..\HARDWARE\IWDG -I..\HARDWARE\WWDG -I..\HARDWARE\TIMER -I..\HARDWARE\MPU6050 -I..\HARDWARE\MPU6050\eMPL -I..\HARDWARE\ENCODER -I..\HARDWARE\PWM -I..\HARDWARE\MOTOR -I..\HARDWARE\CONTROL -I..\HARDWARE\OLED-I "E:\桌面文件\Balance-Car\balance car(未推导版本)\USER\RTE"-I C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\1.0.5\Device\Include-I C:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="514" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\obj\usart.o --omf_browse ..\obj\usart.crf --depend ..\obj\usart.d)
@@ -898,15 +898,15 @@ I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5475F300)
 I (..\HARDWARE\OLED\oled.h)(0x65FE3226)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5475F300)
 I (..\HARDWARE\EXTI\exti.h)(0x65FE3226)
-I (..\HARDWARE\ENCODER\encoder.h)(0x65FE3226)
+I (..\HARDWARE\ENCODER\encoder.h)(0x65FECD9D)
 I (..\HARDWARE\PWM\pwm.h)(0x65FE3226)
-I (..\HARDWARE\MOTOR\motor.h)(0x65FE3226)
+I (..\HARDWARE\MOTOR\motor.h)(0x65FEE121)
 I (..\HARDWARE\CONTROL\control.h)(0x65FE4A23)
 I (..\HARDWARE\MPU6050\mpu6050.h)(0x65FE3226)
-I (..\HARDWARE\MPU6050\mpuiic.h)(0x65FE3226)
+I (..\HARDWARE\MPU6050\mpuiic.h)(0x65FED6A2)
 I (..\HARDWARE\MPU6050\eMPL\inv_mpu.h)(0x65FE3226)
 I (..\HARDWARE\MPU6050\eMPL\inv_mpu_dmp_motion_driver.h)(0x65FE3226)
-F (..\HARDWARE\EXTI\exti.c)(0x65FE3226)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I..\USER -I..\CORE -I..\STM32F10x_FWLib\inc -I..\SYSTEM\delay -I..\SYSTEM\sys -I..\SYSTEM\usart -I..\HARDWARE\LED -I..\HARDWARE\KEY -I..\HARDWARE\BEEP -I..\HARDWARE\EXTI -I..\HARDWARE\IWDG -I..\HARDWARE\WWDG -I..\HARDWARE\TIMER -I..\HARDWARE\MPU6050 -I..\HARDWARE\MPU6050\eMPL -I..\HARDWARE\ENCODER -I..\HARDWARE\PWM -I..\HARDWARE\MOTOR -I..\HARDWARE\CONTROL -I..\HARDWARE\OLED-I "E:\桌面文件\Balance-Car\balance car(未推导版本)\USER\RTE"-I C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\1.0.5\Device\Include-I C:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="514" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\obj\exti.o --omf_browse ..\obj\exti.crf --depend ..\obj\exti.d)
+F (..\HARDWARE\EXTI\exti.c)(0x65FEE104)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I..\USER -I..\CORE -I..\STM32F10x_FWLib\inc -I..\SYSTEM\delay -I..\SYSTEM\sys -I..\SYSTEM\usart -I..\HARDWARE\LED -I..\HARDWARE\KEY -I..\HARDWARE\BEEP -I..\HARDWARE\EXTI -I..\HARDWARE\IWDG -I..\HARDWARE\WWDG -I..\HARDWARE\TIMER -I..\HARDWARE\MPU6050 -I..\HARDWARE\MPU6050\eMPL -I..\HARDWARE\ENCODER -I..\HARDWARE\PWM -I..\HARDWARE\MOTOR -I..\HARDWARE\CONTROL -I..\HARDWARE\OLED-I "E:\桌面文件\Balance-Car\balance car(未推导版本)\USER\RTE"-I C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\1.0.5\Device\Include-I C:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="514" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\obj\exti.o --omf_browse ..\obj\exti.crf --depend ..\obj\exti.d)
 I (..\HARDWARE\EXTI\exti.h)(0x65FE3226)
 I (..\SYSTEM\sys\sys.h)(0x65FE3226)
 I (..\USER\stm32f10x.h)(0x65FE3226)
@@ -942,16 +942,16 @@ I (..\SYSTEM\usart\usart.h)(0x65FE3226)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5475F300)
 I (..\HARDWARE\OLED\oled.h)(0x65FE3226)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5475F300)
-I (..\HARDWARE\ENCODER\encoder.h)(0x65FE3226)
+I (..\HARDWARE\ENCODER\encoder.h)(0x65FECD9D)
 I (..\HARDWARE\PWM\pwm.h)(0x65FE3226)
-I (..\HARDWARE\MOTOR\motor.h)(0x65FE3226)
+I (..\HARDWARE\MOTOR\motor.h)(0x65FEE121)
 I (..\HARDWARE\CONTROL\control.h)(0x65FE4A23)
 I (..\HARDWARE\MPU6050\mpu6050.h)(0x65FE3226)
-I (..\HARDWARE\MPU6050\mpuiic.h)(0x65FE3226)
+I (..\HARDWARE\MPU6050\mpuiic.h)(0x65FED6A2)
 I (..\HARDWARE\MPU6050\eMPL\inv_mpu.h)(0x65FE3226)
 I (..\HARDWARE\MPU6050\eMPL\inv_mpu_dmp_motion_driver.h)(0x65FE3226)
-F (..\HARDWARE\ENCODER\encoder.c)(0x65FE3226)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I..\USER -I..\CORE -I..\STM32F10x_FWLib\inc -I..\SYSTEM\delay -I..\SYSTEM\sys -I..\SYSTEM\usart -I..\HARDWARE\LED -I..\HARDWARE\KEY -I..\HARDWARE\BEEP -I..\HARDWARE\EXTI -I..\HARDWARE\IWDG -I..\HARDWARE\WWDG -I..\HARDWARE\TIMER -I..\HARDWARE\MPU6050 -I..\HARDWARE\MPU6050\eMPL -I..\HARDWARE\ENCODER -I..\HARDWARE\PWM -I..\HARDWARE\MOTOR -I..\HARDWARE\CONTROL -I..\HARDWARE\OLED-I "E:\桌面文件\Balance-Car\balance car(未推导版本)\USER\RTE"-I C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\1.0.5\Device\Include-I C:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="514" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\obj\encoder.o --omf_browse ..\obj\encoder.crf --depend ..\obj\encoder.d)
-I (..\HARDWARE\ENCODER\encoder.h)(0x65FE3226)
+F (..\HARDWARE\ENCODER\encoder.c)(0x65FEDC7F)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I..\USER -I..\CORE -I..\STM32F10x_FWLib\inc -I..\SYSTEM\delay -I..\SYSTEM\sys -I..\SYSTEM\usart -I..\HARDWARE\LED -I..\HARDWARE\KEY -I..\HARDWARE\BEEP -I..\HARDWARE\EXTI -I..\HARDWARE\IWDG -I..\HARDWARE\WWDG -I..\HARDWARE\TIMER -I..\HARDWARE\MPU6050 -I..\HARDWARE\MPU6050\eMPL -I..\HARDWARE\ENCODER -I..\HARDWARE\PWM -I..\HARDWARE\MOTOR -I..\HARDWARE\CONTROL -I..\HARDWARE\OLED-I "E:\桌面文件\Balance-Car\balance car(未推导版本)\USER\RTE"-I C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\1.0.5\Device\Include-I C:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="514" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\obj\encoder.o --omf_browse ..\obj\encoder.crf --depend ..\obj\encoder.d)
+I (..\HARDWARE\ENCODER\encoder.h)(0x65FECD9D)
 I (..\SYSTEM\sys\sys.h)(0x65FE3226)
 I (..\USER\stm32f10x.h)(0x65FE3226)
 I (..\CORE\core_cm3.h)(0x65FE3226)
@@ -988,13 +988,13 @@ I (..\HARDWARE\OLED\oled.h)(0x65FE3226)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5475F300)
 I (..\HARDWARE\EXTI\exti.h)(0x65FE3226)
 I (..\HARDWARE\PWM\pwm.h)(0x65FE3226)
-I (..\HARDWARE\MOTOR\motor.h)(0x65FE3226)
+I (..\HARDWARE\MOTOR\motor.h)(0x65FEE121)
 I (..\HARDWARE\CONTROL\control.h)(0x65FE4A23)
 I (..\HARDWARE\MPU6050\mpu6050.h)(0x65FE3226)
-I (..\HARDWARE\MPU6050\mpuiic.h)(0x65FE3226)
+I (..\HARDWARE\MPU6050\mpuiic.h)(0x65FED6A2)
 I (..\HARDWARE\MPU6050\eMPL\inv_mpu.h)(0x65FE3226)
 I (..\HARDWARE\MPU6050\eMPL\inv_mpu_dmp_motion_driver.h)(0x65FE3226)
-F (..\HARDWARE\PWM\pwm.c)(0x65FE3226)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I..\USER -I..\CORE -I..\STM32F10x_FWLib\inc -I..\SYSTEM\delay -I..\SYSTEM\sys -I..\SYSTEM\usart -I..\HARDWARE\LED -I..\HARDWARE\KEY -I..\HARDWARE\BEEP -I..\HARDWARE\EXTI -I..\HARDWARE\IWDG -I..\HARDWARE\WWDG -I..\HARDWARE\TIMER -I..\HARDWARE\MPU6050 -I..\HARDWARE\MPU6050\eMPL -I..\HARDWARE\ENCODER -I..\HARDWARE\PWM -I..\HARDWARE\MOTOR -I..\HARDWARE\CONTROL -I..\HARDWARE\OLED-I "E:\桌面文件\Balance-Car\balance car(未推导版本)\USER\RTE"-I C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\1.0.5\Device\Include-I C:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="514" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\obj\pwm.o --omf_browse ..\obj\pwm.crf --depend ..\obj\pwm.d)
+F (..\HARDWARE\PWM\pwm.c)(0x65FEE104)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I..\USER -I..\CORE -I..\STM32F10x_FWLib\inc -I..\SYSTEM\delay -I..\SYSTEM\sys -I..\SYSTEM\usart -I..\HARDWARE\LED -I..\HARDWARE\KEY -I..\HARDWARE\BEEP -I..\HARDWARE\EXTI -I..\HARDWARE\IWDG -I..\HARDWARE\WWDG -I..\HARDWARE\TIMER -I..\HARDWARE\MPU6050 -I..\HARDWARE\MPU6050\eMPL -I..\HARDWARE\ENCODER -I..\HARDWARE\PWM -I..\HARDWARE\MOTOR -I..\HARDWARE\CONTROL -I..\HARDWARE\OLED-I "E:\桌面文件\Balance-Car\balance car(未推导版本)\USER\RTE"-I C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\1.0.5\Device\Include-I C:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="514" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\obj\pwm.o --omf_browse ..\obj\pwm.crf --depend ..\obj\pwm.d)
 I (..\HARDWARE\PWM\pwm.h)(0x65FE3226)
 I (..\SYSTEM\sys\sys.h)(0x65FE3226)
 I (..\USER\stm32f10x.h)(0x65FE3226)
@@ -1031,15 +1031,15 @@ I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5475F300)
 I (..\HARDWARE\OLED\oled.h)(0x65FE3226)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5475F300)
 I (..\HARDWARE\EXTI\exti.h)(0x65FE3226)
-I (..\HARDWARE\ENCODER\encoder.h)(0x65FE3226)
-I (..\HARDWARE\MOTOR\motor.h)(0x65FE3226)
+I (..\HARDWARE\ENCODER\encoder.h)(0x65FECD9D)
+I (..\HARDWARE\MOTOR\motor.h)(0x65FEE121)
 I (..\HARDWARE\CONTROL\control.h)(0x65FE4A23)
 I (..\HARDWARE\MPU6050\mpu6050.h)(0x65FE3226)
-I (..\HARDWARE\MPU6050\mpuiic.h)(0x65FE3226)
+I (..\HARDWARE\MPU6050\mpuiic.h)(0x65FED6A2)
 I (..\HARDWARE\MPU6050\eMPL\inv_mpu.h)(0x65FE3226)
 I (..\HARDWARE\MPU6050\eMPL\inv_mpu_dmp_motion_driver.h)(0x65FE3226)
-F (..\HARDWARE\MOTOR\motor.c)(0x65FE3226)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I..\USER -I..\CORE -I..\STM32F10x_FWLib\inc -I..\SYSTEM\delay -I..\SYSTEM\sys -I..\SYSTEM\usart -I..\HARDWARE\LED -I..\HARDWARE\KEY -I..\HARDWARE\BEEP -I..\HARDWARE\EXTI -I..\HARDWARE\IWDG -I..\HARDWARE\WWDG -I..\HARDWARE\TIMER -I..\HARDWARE\MPU6050 -I..\HARDWARE\MPU6050\eMPL -I..\HARDWARE\ENCODER -I..\HARDWARE\PWM -I..\HARDWARE\MOTOR -I..\HARDWARE\CONTROL -I..\HARDWARE\OLED-I "E:\桌面文件\Balance-Car\balance car(未推导版本)\USER\RTE"-I C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\1.0.5\Device\Include-I C:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="514" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\obj\motor.o --omf_browse ..\obj\motor.crf --depend ..\obj\motor.d)
-I (..\HARDWARE\MOTOR\motor.h)(0x65FE3226)
+F (..\HARDWARE\MOTOR\motor.c)(0x65FEE104)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I..\USER -I..\CORE -I..\STM32F10x_FWLib\inc -I..\SYSTEM\delay -I..\SYSTEM\sys -I..\SYSTEM\usart -I..\HARDWARE\LED -I..\HARDWARE\KEY -I..\HARDWARE\BEEP -I..\HARDWARE\EXTI -I..\HARDWARE\IWDG -I..\HARDWARE\WWDG -I..\HARDWARE\TIMER -I..\HARDWARE\MPU6050 -I..\HARDWARE\MPU6050\eMPL -I..\HARDWARE\ENCODER -I..\HARDWARE\PWM -I..\HARDWARE\MOTOR -I..\HARDWARE\CONTROL -I..\HARDWARE\OLED-I "E:\桌面文件\Balance-Car\balance car(未推导版本)\USER\RTE"-I C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\1.0.5\Device\Include-I C:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="514" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\obj\motor.o --omf_browse ..\obj\motor.crf --depend ..\obj\motor.d)
+I (..\HARDWARE\MOTOR\motor.h)(0x65FEE121)
 I (..\SYSTEM\sys\sys.h)(0x65FE3226)
 I (..\USER\stm32f10x.h)(0x65FE3226)
 I (..\CORE\core_cm3.h)(0x65FE3226)
@@ -1075,15 +1075,15 @@ I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5475F300)
 I (..\HARDWARE\OLED\oled.h)(0x65FE3226)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5475F300)
 I (..\HARDWARE\EXTI\exti.h)(0x65FE3226)
-I (..\HARDWARE\ENCODER\encoder.h)(0x65FE3226)
+I (..\HARDWARE\ENCODER\encoder.h)(0x65FECD9D)
 I (..\HARDWARE\PWM\pwm.h)(0x65FE3226)
 I (..\HARDWARE\CONTROL\control.h)(0x65FE4A23)
 I (..\HARDWARE\MPU6050\mpu6050.h)(0x65FE3226)
-I (..\HARDWARE\MPU6050\mpuiic.h)(0x65FE3226)
+I (..\HARDWARE\MPU6050\mpuiic.h)(0x65FED6A2)
 I (..\HARDWARE\MPU6050\eMPL\inv_mpu.h)(0x65FE3226)
 I (..\HARDWARE\MPU6050\eMPL\inv_mpu_dmp_motion_driver.h)(0x65FE3226)
-F (..\HARDWARE\MOTOR\motor.h)(0x65FE3226)()
-F (..\HARDWARE\CONTROL\control.c)(0x65FE4A23)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I..\USER -I..\CORE -I..\STM32F10x_FWLib\inc -I..\SYSTEM\delay -I..\SYSTEM\sys -I..\SYSTEM\usart -I..\HARDWARE\LED -I..\HARDWARE\KEY -I..\HARDWARE\BEEP -I..\HARDWARE\EXTI -I..\HARDWARE\IWDG -I..\HARDWARE\WWDG -I..\HARDWARE\TIMER -I..\HARDWARE\MPU6050 -I..\HARDWARE\MPU6050\eMPL -I..\HARDWARE\ENCODER -I..\HARDWARE\PWM -I..\HARDWARE\MOTOR -I..\HARDWARE\CONTROL -I..\HARDWARE\OLED-I "E:\桌面文件\Balance-Car\balance car(未推导版本)\USER\RTE"-I C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\1.0.5\Device\Include-I C:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="514" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\obj\control.o --omf_browse ..\obj\control.crf --depend ..\obj\control.d)
+F (..\HARDWARE\MOTOR\motor.h)(0x65FEE121)()
+F (..\HARDWARE\CONTROL\control.c)(0x65FEE3DB)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I..\USER -I..\CORE -I..\STM32F10x_FWLib\inc -I..\SYSTEM\delay -I..\SYSTEM\sys -I..\SYSTEM\usart -I..\HARDWARE\LED -I..\HARDWARE\KEY -I..\HARDWARE\BEEP -I..\HARDWARE\EXTI -I..\HARDWARE\IWDG -I..\HARDWARE\WWDG -I..\HARDWARE\TIMER -I..\HARDWARE\MPU6050 -I..\HARDWARE\MPU6050\eMPL -I..\HARDWARE\ENCODER -I..\HARDWARE\PWM -I..\HARDWARE\MOTOR -I..\HARDWARE\CONTROL -I..\HARDWARE\OLED-I "E:\桌面文件\Balance-Car\balance car(未推导版本)\USER\RTE"-I C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\1.0.5\Device\Include-I C:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="514" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\obj\control.o --omf_browse ..\obj\control.crf --depend ..\obj\control.d)
 I (..\HARDWARE\CONTROL\control.h)(0x65FE4A23)
 I (..\SYSTEM\sys\sys.h)(0x65FE3226)
 I (..\USER\stm32f10x.h)(0x65FE3226)
@@ -1120,17 +1120,17 @@ I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5475F300)
 I (..\HARDWARE\OLED\oled.h)(0x65FE3226)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5475F300)
 I (..\HARDWARE\EXTI\exti.h)(0x65FE3226)
-I (..\HARDWARE\ENCODER\encoder.h)(0x65FE3226)
+I (..\HARDWARE\ENCODER\encoder.h)(0x65FECD9D)
 I (..\HARDWARE\PWM\pwm.h)(0x65FE3226)
-I (..\HARDWARE\MOTOR\motor.h)(0x65FE3226)
+I (..\HARDWARE\MOTOR\motor.h)(0x65FEE121)
 I (..\HARDWARE\MPU6050\mpu6050.h)(0x65FE3226)
-I (..\HARDWARE\MPU6050\mpuiic.h)(0x65FE3226)
+I (..\HARDWARE\MPU6050\mpuiic.h)(0x65FED6A2)
 I (..\HARDWARE\MPU6050\eMPL\inv_mpu.h)(0x65FE3226)
 I (..\HARDWARE\MPU6050\eMPL\inv_mpu_dmp_motion_driver.h)(0x65FE3226)
 F (..\HARDWARE\CONTROL\control.h)(0x65FE4A23)()
 F (..\HARDWARE\MPU6050\mpu6050.c)(0x65FE3226)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I..\USER -I..\CORE -I..\STM32F10x_FWLib\inc -I..\SYSTEM\delay -I..\SYSTEM\sys -I..\SYSTEM\usart -I..\HARDWARE\LED -I..\HARDWARE\KEY -I..\HARDWARE\BEEP -I..\HARDWARE\EXTI -I..\HARDWARE\IWDG -I..\HARDWARE\WWDG -I..\HARDWARE\TIMER -I..\HARDWARE\MPU6050 -I..\HARDWARE\MPU6050\eMPL -I..\HARDWARE\ENCODER -I..\HARDWARE\PWM -I..\HARDWARE\MOTOR -I..\HARDWARE\CONTROL -I..\HARDWARE\OLED-I "E:\桌面文件\Balance-Car\balance car(未推导版本)\USER\RTE"-I C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\1.0.5\Device\Include-I C:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="514" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\obj\mpu6050.o --omf_browse ..\obj\mpu6050.crf --depend ..\obj\mpu6050.d)
 I (..\HARDWARE\MPU6050\mpu6050.h)(0x65FE3226)
-I (..\HARDWARE\MPU6050\mpuiic.h)(0x65FE3226)
+I (..\HARDWARE\MPU6050\mpuiic.h)(0x65FED6A2)
 I (..\SYSTEM\sys\sys.h)(0x65FE3226)
 I (..\USER\stm32f10x.h)(0x65FE3226)
 I (..\CORE\core_cm3.h)(0x65FE3226)
@@ -1166,14 +1166,14 @@ I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5475F300)
 I (..\HARDWARE\OLED\oled.h)(0x65FE3226)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5475F300)
 I (..\HARDWARE\EXTI\exti.h)(0x65FE3226)
-I (..\HARDWARE\ENCODER\encoder.h)(0x65FE3226)
+I (..\HARDWARE\ENCODER\encoder.h)(0x65FECD9D)
 I (..\HARDWARE\PWM\pwm.h)(0x65FE3226)
-I (..\HARDWARE\MOTOR\motor.h)(0x65FE3226)
+I (..\HARDWARE\MOTOR\motor.h)(0x65FEE121)
 I (..\HARDWARE\CONTROL\control.h)(0x65FE4A23)
 I (..\HARDWARE\MPU6050\eMPL\inv_mpu.h)(0x65FE3226)
 I (..\HARDWARE\MPU6050\eMPL\inv_mpu_dmp_motion_driver.h)(0x65FE3226)
 F (..\HARDWARE\MPU6050\mpuiic.c)(0x65FE3226)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I..\USER -I..\CORE -I..\STM32F10x_FWLib\inc -I..\SYSTEM\delay -I..\SYSTEM\sys -I..\SYSTEM\usart -I..\HARDWARE\LED -I..\HARDWARE\KEY -I..\HARDWARE\BEEP -I..\HARDWARE\EXTI -I..\HARDWARE\IWDG -I..\HARDWARE\WWDG -I..\HARDWARE\TIMER -I..\HARDWARE\MPU6050 -I..\HARDWARE\MPU6050\eMPL -I..\HARDWARE\ENCODER -I..\HARDWARE\PWM -I..\HARDWARE\MOTOR -I..\HARDWARE\CONTROL -I..\HARDWARE\OLED-I "E:\桌面文件\Balance-Car\balance car(未推导版本)\USER\RTE"-I C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\1.0.5\Device\Include-I C:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="514" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\obj\mpuiic.o --omf_browse ..\obj\mpuiic.crf --depend ..\obj\mpuiic.d)
-I (..\HARDWARE\MPU6050\mpuiic.h)(0x65FE3226)
+I (..\HARDWARE\MPU6050\mpuiic.h)(0x65FED6A2)
 I (..\SYSTEM\sys\sys.h)(0x65FE3226)
 I (..\USER\stm32f10x.h)(0x65FE3226)
 I (..\CORE\core_cm3.h)(0x65FE3226)
@@ -1209,9 +1209,9 @@ I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5475F300)
 I (..\HARDWARE\OLED\oled.h)(0x65FE3226)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5475F300)
 I (..\HARDWARE\EXTI\exti.h)(0x65FE3226)
-I (..\HARDWARE\ENCODER\encoder.h)(0x65FE3226)
+I (..\HARDWARE\ENCODER\encoder.h)(0x65FECD9D)
 I (..\HARDWARE\PWM\pwm.h)(0x65FE3226)
-I (..\HARDWARE\MOTOR\motor.h)(0x65FE3226)
+I (..\HARDWARE\MOTOR\motor.h)(0x65FEE121)
 I (..\HARDWARE\CONTROL\control.h)(0x65FE4A23)
 I (..\HARDWARE\MPU6050\mpu6050.h)(0x65FE3226)
 I (..\HARDWARE\MPU6050\eMPL\inv_mpu.h)(0x65FE3226)
@@ -1251,12 +1251,12 @@ I (..\SYSTEM\delay\delay.h)(0x65FE3226)
 I (..\SYSTEM\usart\usart.h)(0x65FE3226)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5475F300)
 I (..\HARDWARE\EXTI\exti.h)(0x65FE3226)
-I (..\HARDWARE\ENCODER\encoder.h)(0x65FE3226)
+I (..\HARDWARE\ENCODER\encoder.h)(0x65FECD9D)
 I (..\HARDWARE\PWM\pwm.h)(0x65FE3226)
-I (..\HARDWARE\MOTOR\motor.h)(0x65FE3226)
+I (..\HARDWARE\MOTOR\motor.h)(0x65FEE121)
 I (..\HARDWARE\CONTROL\control.h)(0x65FE4A23)
 I (..\HARDWARE\MPU6050\mpu6050.h)(0x65FE3226)
-I (..\HARDWARE\MPU6050\mpuiic.h)(0x65FE3226)
+I (..\HARDWARE\MPU6050\mpuiic.h)(0x65FED6A2)
 I (..\HARDWARE\MPU6050\eMPL\inv_mpu.h)(0x65FE3226)
 I (..\HARDWARE\MPU6050\eMPL\inv_mpu_dmp_motion_driver.h)(0x65FE3226)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5475F300)
@@ -1297,15 +1297,15 @@ I (..\STM32F10x_FWLib\inc\stm32f10x_wwdg.h)(0x65FE3226)
 I (..\STM32F10x_FWLib\inc\misc.h)(0x65FE3226)
 I (..\HARDWARE\MPU6050\eMPL\inv_mpu_dmp_motion_driver.h)(0x65FE3226)
 I (..\HARDWARE\MPU6050\mpu6050.h)(0x65FE3226)
-I (..\HARDWARE\MPU6050\mpuiic.h)(0x65FE3226)
+I (..\HARDWARE\MPU6050\mpuiic.h)(0x65FED6A2)
 I (..\SYSTEM\sys\sys.h)(0x65FE3226)
 I (..\SYSTEM\delay\delay.h)(0x65FE3226)
 I (..\SYSTEM\usart\usart.h)(0x65FE3226)
 I (..\HARDWARE\OLED\oled.h)(0x65FE3226)
 I (..\HARDWARE\EXTI\exti.h)(0x65FE3226)
-I (..\HARDWARE\ENCODER\encoder.h)(0x65FE3226)
+I (..\HARDWARE\ENCODER\encoder.h)(0x65FECD9D)
 I (..\HARDWARE\PWM\pwm.h)(0x65FE3226)
-I (..\HARDWARE\MOTOR\motor.h)(0x65FE3226)
+I (..\HARDWARE\MOTOR\motor.h)(0x65FEE121)
 I (..\HARDWARE\CONTROL\control.h)(0x65FE4A23)
 F (..\HARDWARE\MPU6050\eMPL\inv_mpu_dmp_motion_driver.c)(0x65FE3226)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I..\USER -I..\CORE -I..\STM32F10x_FWLib\inc -I..\SYSTEM\delay -I..\SYSTEM\sys -I..\SYSTEM\usart -I..\HARDWARE\LED -I..\HARDWARE\KEY -I..\HARDWARE\BEEP -I..\HARDWARE\EXTI -I..\HARDWARE\IWDG -I..\HARDWARE\WWDG -I..\HARDWARE\TIMER -I..\HARDWARE\MPU6050 -I..\HARDWARE\MPU6050\eMPL -I..\HARDWARE\ENCODER -I..\HARDWARE\PWM -I..\HARDWARE\MOTOR -I..\HARDWARE\CONTROL -I..\HARDWARE\OLED-I "E:\桌面文件\Balance-Car\balance car(未推导版本)\USER\RTE"-I C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\1.0.5\Device\Include-I C:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="514" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\obj\inv_mpu_dmp_motion_driver.o --omf_browse ..\obj\inv_mpu_dmp_motion_driver.crf --depend ..\obj\inv_mpu_dmp_motion_driver.d)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5475F300)
@@ -1349,9 +1349,9 @@ I (..\SYSTEM\sys\sys.h)(0x65FE3226)
 I (..\SYSTEM\delay\delay.h)(0x65FE3226)
 I (..\HARDWARE\OLED\oled.h)(0x65FE3226)
 I (..\HARDWARE\EXTI\exti.h)(0x65FE3226)
-I (..\HARDWARE\ENCODER\encoder.h)(0x65FE3226)
+I (..\HARDWARE\ENCODER\encoder.h)(0x65FECD9D)
 I (..\HARDWARE\PWM\pwm.h)(0x65FE3226)
-I (..\HARDWARE\MOTOR\motor.h)(0x65FE3226)
+I (..\HARDWARE\MOTOR\motor.h)(0x65FEE121)
 I (..\HARDWARE\CONTROL\control.h)(0x65FE4A23)
 I (..\HARDWARE\MPU6050\mpu6050.h)(0x65FE3226)
-I (..\HARDWARE\MPU6050\mpuiic.h)(0x65FE3226)
+I (..\HARDWARE\MPU6050\mpuiic.h)(0x65FED6A2)

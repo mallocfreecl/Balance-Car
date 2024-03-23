@@ -9,9 +9,9 @@ void Motor_Init(void)
 	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOB, ENABLE);
 
 	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_12 |GPIO_Pin_13 |GPIO_Pin_14 |GPIO_Pin_15;  //PB12、PB13、PB14、PB15
-  GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;           //推挽输出
+	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;           //推挽输出
 	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
-  GPIO_Init(GPIOB, &GPIO_InitStructure);
+	GPIO_Init(GPIOB, &GPIO_InitStructure);
 
 }
 
@@ -36,13 +36,13 @@ int GFP_abs(int num)
 //入口参数：PID运算完最终的PWM值
 void Load(int motor1,int motor2)
 {
-	if(motor1 >= 0) {Ain1 = 1; Ain2 = 0;}//正转
-	else            {Ain1 = 0; Ain2 = 1;}//反转
-	TIM_SetCompare1(TIM1,GFP_abs(motor1));
+	if(motor1 >= 0) {Bin1 = 1; Bin2 = 0;}//正转
+	else            {Bin1 = 0; Bin2 = 1;}//反转
+	TIM_SetCompare1(TIM1,GFP_abs(motor1));  //PWM输出引脚PA8 控制的是B电机
 	
-	if(motor2 >= 0) {Bin1 = 1; Bin2 = 0;}
-	else            {Bin1 = 0; Bin2 = 1;}
-	TIM_SetCompare4(TIM1,GFP_abs(motor2));
+	if(motor2 >= 0) {Ain1 = 1; Ain2 = 0;}
+	else            {Ain1 = 0; Ain2 = 1;}
+	TIM_SetCompare4(TIM1,GFP_abs(motor2));  //PWM输出引脚PA11 控制的是A电机
 
 }
 
