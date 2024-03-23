@@ -41,6 +41,6 @@
 "..\obj\inv_mpu.o"
 "..\obj\inv_mpu_dmp_motion_driver.o"
 --strict --scatter "..\OBJ\Balance Car.sct"
---summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers
 --list ".\Listings\Balance Car.map" -o "..\OBJ\Balance Car.axf"

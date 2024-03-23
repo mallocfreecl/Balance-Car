@@ -2,6 +2,9 @@
 
 //该程序默认机械中值为0
 float Med_Angle = 0; //机械中值  根据实际情况改变机械中值
+float Target_Speed = 0; //二次开发，期望速度
+
+
 float Vertical_Kp,Vertical_Kd; //直立环Kp、Kd
 float Velocity_Kp,Velocity_Ki; //速度环Kp、Ki
 float Turn_Kp;
@@ -27,14 +30,14 @@ int Vertical(float Med, float Angle, float gyro_Y)  //入口参数可以优化一下
 
 //PI: 比例积分 速度环：对编码器读取的速度进行PD控制
 //vertical_out = Kp*Ek+Ki*Ek_S     Ek:速度的偏差  Ek_S:速度的偏差的积分
-int Velocity(int encoder_left,int encoder_right)  //入口参数可以优化一下
+int Velocity(int target_speed,int encoder_left,int encoder_right)  //入口参数可以优化一下
 {
 	//对PWM输出、编码器偏差、低通滤波输出、低通滤波输出的积分、对本次低通滤波输出进行记录  低通滤波系数进行定义
 	static int PWM_out, Encoder_Err, EnC_Err_Lowout, EnC_Err_Lowout_S, EnC_Err_Lowout_Last;//EnC_Err_Lowout_Last起初可以初始化为0 初不初始化都可以，因为后面的值会覆盖
 	float a = 0.7;
 	
 	//1、计算编码器偏差
-	Encoder_Err = (encoder_left + encoder_right) - 0;//期望速度为0  舍去误差
+	Encoder_Err = (encoder_left + encoder_right) - target_speed;//期望速度为0  舍去误差
 	
 	//2、对速度偏差进行低通滤波         //??
 	EnC_Err_Lowout = (1-a)*Encoder_Err + a * EnC_Err_Lowout_Last;
@@ -78,7 +81,7 @@ void EXTI9_5_IRQHandler(void) //检测到mpu6050的下降沿信号
 		
 		//2、将数据压入闭环控制，计算控制量
 		
-		velocity_out = Velocity(Enconder_Left,Enconder_Right);
+		velocity_out = Velocity(Target_Speed,Enconder_Left,Enconder_Right);
 		vertical_out = Vertical(velocity_out+Med_Angle,Pitch,gyroy);
 		Turn_out = Turn(gyroz);
 		PWM_out = vertical_out;

@@ -3,7 +3,7 @@
 ..\obj\mpuiic.o: ..\SYSTEM\sys\sys.h
 ..\obj\mpuiic.o: ..\USER\stm32f10x.h
 ..\obj\mpuiic.o: ..\CORE\core_cm3.h
-..\obj\mpuiic.o: D:\keil\ARM\ARMCC\Bin\..\include\stdint.h
+..\obj\mpuiic.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 ..\obj\mpuiic.o: ..\USER\system_stm32f10x.h
 ..\obj\mpuiic.o: ..\USER\stm32f10x_conf.h
 ..\obj\mpuiic.o: ..\STM32F10x_FWLib\inc\stm32f10x_adc.h
@@ -33,9 +33,9 @@
 ..\obj\mpuiic.o: ..\SYSTEM\delay\delay.h
 ..\obj\mpuiic.o: ..\SYSTEM\sys\sys.h
 ..\obj\mpuiic.o: ..\SYSTEM\usart\usart.h
-..\obj\mpuiic.o: D:\keil\ARM\ARMCC\Bin\..\include\stdio.h
+..\obj\mpuiic.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 ..\obj\mpuiic.o: ..\HARDWARE\OLED\oled.h
-..\obj\mpuiic.o: D:\keil\ARM\ARMCC\Bin\..\include\stdlib.h
+..\obj\mpuiic.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
 ..\obj\mpuiic.o: ..\HARDWARE\EXTI\exti.h
 ..\obj\mpuiic.o: ..\HARDWARE\ENCODER\encoder.h
 ..\obj\mpuiic.o: ..\HARDWARE\PWM\pwm.h
