@@ -47,3 +47,5 @@
 ..\obj\inv_mpu.o: ..\HARDWARE\MOTOR\motor.h
 ..\obj\inv_mpu.o: ..\HARDWARE\CONTROL\control.h
 ..\obj\inv_mpu.o: ..\HARDWARE\MPU6050\mpu6050.h
+..\obj\inv_mpu.o: ..\HARDWARE\KEY\key.h
+..\obj\inv_mpu.o: ..\HARDWARE\LED\led.h

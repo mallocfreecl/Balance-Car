@@ -45,3 +45,5 @@
 ..\obj\control.o: ..\HARDWARE\MPU6050\mpuiic.h
 ..\obj\control.o: ..\HARDWARE\MPU6050\eMPL\inv_mpu.h
 ..\obj\control.o: ..\HARDWARE\MPU6050\eMPL\inv_mpu_dmp_motion_driver.h
+..\obj\control.o: ..\HARDWARE\KEY\key.h
+..\obj\control.o: ..\HARDWARE\LED\led.h

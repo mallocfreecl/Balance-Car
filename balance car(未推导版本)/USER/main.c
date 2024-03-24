@@ -17,6 +17,9 @@ int main(void)
 	delay_init();
 	uart_init(115200);
 	 
+	led_init();
+	key_init();
+	
 	OLED_Init();
 	OLED_Clear();
 	

@@ -44,7 +44,7 @@ int Velocity(int encoder_left,int encoder_right)  //入口参数可以优化一下
 	EnC_Err_Lowout_S += EnC_Err_Lowout;
 	
 	//4、对速度偏差低通滤波积分进行限幅  为什么是10000？？
-	EnC_Err_Lowout_S = EnC_Err_Lowout_S >= 10000 ? EnC_Err_Lowout_S :(EnC_Err_Lowout_S <= -10000 ? (-10000) : EnC_Err_Lowout_S);
+	EnC_Err_Lowout_S = EnC_Err_Lowout_S >= 10000 ? 10000 :(EnC_Err_Lowout_S <= -10000 ? (-10000) : EnC_Err_Lowout_S);
 	
 	//5、速度环控制输出
 	PWM_out = Velocity_Kp * EnC_Err_Lowout + Velocity_Ki * EnC_Err_Lowout_S;

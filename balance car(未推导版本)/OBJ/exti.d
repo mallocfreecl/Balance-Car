@@ -45,3 +45,5 @@
 ..\obj\exti.o: ..\HARDWARE\MPU6050\mpuiic.h
 ..\obj\exti.o: ..\HARDWARE\MPU6050\eMPL\inv_mpu.h
 ..\obj\exti.o: ..\HARDWARE\MPU6050\eMPL\inv_mpu_dmp_motion_driver.h
+..\obj\exti.o: ..\HARDWARE\KEY\key.h
+..\obj\exti.o: ..\HARDWARE\LED\led.h

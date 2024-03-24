@@ -45,3 +45,5 @@
 ..\obj\encoder.o: ..\HARDWARE\MPU6050\mpuiic.h
 ..\obj\encoder.o: ..\HARDWARE\MPU6050\eMPL\inv_mpu.h
 ..\obj\encoder.o: ..\HARDWARE\MPU6050\eMPL\inv_mpu_dmp_motion_driver.h
+..\obj\encoder.o: ..\HARDWARE\KEY\key.h
+..\obj\encoder.o: ..\HARDWARE\LED\led.h
