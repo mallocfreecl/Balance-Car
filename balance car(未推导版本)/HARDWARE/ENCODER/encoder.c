@@ -1,7 +1,7 @@
 #include "encoder.h"
 
 
-//编码器1 使用TIM2 CH1(PA0) CH2(PA1)两个通道   //硬件上测的是B电机的速度
+//编码器1 使用TIM2 CH1(PA0) CH2(PA1)两个通道   //硬件上测的是A电机的速度
 void Encoder_TIM2_Init(void)
 {
 	//GPIO,定时器,输入捕获结构体定义    
@@ -45,7 +45,7 @@ void Encoder_TIM2_Init(void)
 }
 
 
-//编码器2 使用TIM3 CH1(PA6) CH2(PA7)两个通道          //硬件上测的是A电机的速度
+//编码器2 使用TIM3 CH1(PA6) CH2(PA7)两个通道          //硬件上测的是B电机的速度
 void Encoder_TIM3_Init(void)             
 {
 	//GPIO,定时器,输入捕获结构体定义    

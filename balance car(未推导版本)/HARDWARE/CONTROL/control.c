@@ -33,14 +33,14 @@ int Vertical(float Med, float Angle, float gyro_Y)  //入口参数可以优化一下
 int Velocity(int target_speed,int encoder_left,int encoder_right)  //入口参数可以优化一下
 {
 	//对PWM输出、编码器偏差、低通滤波输出、低通滤波输出的积分、对本次低通滤波输出进行记录  低通滤波系数进行定义
-	static int PWM_out, Encoder_Err, EnC_Err_Lowout, EnC_Err_Lowout_S, EnC_Err_Lowout_Last;//EnC_Err_Lowout_Last起初可以初始化为0 初不初始化都可以，因为后面的值会覆盖
+	static int PWM_out, Encoder_Err, EnC_Err_Lowout, EnC_Err_Lowout_S, EnC_Err_Lowout_Last;//局部静态变量未初始化时值为0，与全局变量相同
 	float a = 0.7;
 	
 	//1、计算编码器偏差
 	Encoder_Err = (encoder_left + encoder_right) - target_speed;//期望速度为0  舍去误差
 	
 	//2、对速度偏差进行低通滤波         //??
-	EnC_Err_Lowout = (1-a)*Encoder_Err + a * EnC_Err_Lowout_Last;
+	EnC_Err_Lowout = (1-a) * Encoder_Err + a * EnC_Err_Lowout_Last;
 	EnC_Err_Lowout_Last = EnC_Err_Lowout;
 	
 	//3、对速度偏差低通滤波进行积分
