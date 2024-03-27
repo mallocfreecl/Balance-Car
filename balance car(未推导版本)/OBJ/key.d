@@ -47,3 +47,4 @@
 ..\obj\key.o: ..\HARDWARE\MPU6050\eMPL\inv_mpu_dmp_motion_driver.h
 ..\obj\key.o: ..\HARDWARE\KEY\key.h
 ..\obj\key.o: ..\HARDWARE\LED\led.h
+..\obj\key.o: ..\HARDWARE\ADC\adc.h

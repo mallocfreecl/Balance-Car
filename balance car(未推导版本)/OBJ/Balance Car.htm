@@ -3,7 +3,7 @@
 <title>Static Call Graph - [..\OBJ\Balance Car.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image ..\OBJ\Balance Car.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5050106: Last Updated: Tue Mar 26 20:49:16 2024
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5050106: Last Updated: Wed Mar 27 21:52:30 2024
 <BR><P>
 <H3>Maximum Stack Usage =        320 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -1833,9 +1833,7 @@ Global Symbols
 <P><STRONG><a name="[115]"></a>mpu_run_self_test</STRONG> (Thumb, 278 bytes, Stack size 88 bytes, inv_mpu.o(i.mpu_run_self_test))
 <BR><BR>[Stack]<UL><LI>Max Depth = 216<LI>Call Chain = mpu_run_self_test &rArr; accel_self_test &rArr; get_accel_prod_shift &rArr; MPU_Read_Len &rArr; MPU_IIC_Read_Byte &rArr; MPU_IIC_NAck &rArr; MPU_IIC_Delay
 </UL>
-<BR>[Calls]<UL><LI><a href="#[116]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_get_gyro_fsr
-<LI><a href="#[119]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_get_fifo_config
-<LI><a href="#[f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_get_accel_fsr
+<BR>[Calls]<UL><LI><a href="#[f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_get_accel_fsr
 <LI><a href="#[105]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_configure_fifo
 <LI><a href="#[fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gyro_self_test
 <LI><a href="#[fa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_st_biases
@@ -1848,6 +1846,8 @@ Global Symbols
 <LI><a href="#[10e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_set_accel_fsr
 <LI><a href="#[118]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_get_sample_rate
 <LI><a href="#[117]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_get_lpf
+<LI><a href="#[116]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_get_gyro_fsr
+<LI><a href="#[119]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_get_fifo_config
 </UL>
 <BR>[Called By]<UL><LI><a href="#[10b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;run_self_test
 </UL>

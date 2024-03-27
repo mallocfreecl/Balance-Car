@@ -51,3 +51,4 @@
 ..\obj\inv_mpu_dmp_motion_driver.o: ..\HARDWARE\MPU6050\mpuiic.h
 ..\obj\inv_mpu_dmp_motion_driver.o: ..\HARDWARE\KEY\key.h
 ..\obj\inv_mpu_dmp_motion_driver.o: ..\HARDWARE\LED\led.h
+..\obj\inv_mpu_dmp_motion_driver.o: ..\HARDWARE\ADC\adc.h

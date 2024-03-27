@@ -19,7 +19,7 @@ int vertical_out,velocity_out,Turn_out,PWM_out; //Ö±Á¢»·Êä³ö¡¢ËÙ¶È»·Êä³ö¡¢×ªÏò»·
 
 //Èë¿Ú²ÎÊı£ºÆÚÍû½Ç¶È£¬ÕæÊµ½Ç¶È(µ±Ç°½Ç¶È)£¬ÕæÊµ½ÇËÙ¶È(µ±Ç°½ÇËÙ¶È)
 
-//×îºó´®¼¶PIDµÄ½á¹û: Kp1*ÕæÊµ½Ç¶È + Kd*½Ç¶ÈÆ«²îµÄÎ¢·Ö - Kp1*(Kp2*±àÂëÆ÷Æ«²î-Ki* ±àÂëÆ÷Æ«²îµÄÎ¢·Ö) Kp1:Ö±Á¢»·µÄKp  Kp2:ËÙ¶È»·µÄKp
+//×îºó´®¼¶PIDµÄ½á¹û: Kp1*ÕæÊµ½Ç¶È + Kd*½Ç¶ÈÆ«²îµÄÎ¢·Ö - Kp1*(Kp2*±àÂëÆ÷Æ«²î-Ki* ±àÂëÆ÷Æ«²îµÄ»ı·Ö) Kp1:Ö±Á¢»·µÄKp  Kp2:ËÙ¶È»·µÄKp
 int Vertical(float Med, float Angle, float gyro_Y)  //Èë¿Ú²ÎÊı¿ÉÒÔÓÅ»¯Ò»ÏÂ
 {
 	int PWM_out;
@@ -51,6 +51,8 @@ int Velocity(int target_speed,int encoder_left,int encoder_right)  //Èë¿Ú²ÎÊı¿ÉÒ
 	
 	//5¡¢ËÙ¶È»·¿ØÖÆÊä³ö
 	PWM_out = Velocity_Kp * EnC_Err_Lowout + Velocity_Ki * EnC_Err_Lowout_S;
+	
+//	if(Pitch<-40||Pitch>40) 	EnC_Err_Lowout_S=0;     						//===µç»ú¹Ø±ÕºóÇå³ı»ı·Ö
 	return PWM_out;
 }
 

@@ -47,3 +47,4 @@
 ..\obj\mpuiic.o: ..\HARDWARE\MPU6050\eMPL\inv_mpu_dmp_motion_driver.h
 ..\obj\mpuiic.o: ..\HARDWARE\KEY\key.h
 ..\obj\mpuiic.o: ..\HARDWARE\LED\led.h
+..\obj\mpuiic.o: ..\HARDWARE\ADC\adc.h

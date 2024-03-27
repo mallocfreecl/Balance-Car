@@ -47,3 +47,4 @@
 ..\obj\delay.o: ..\HARDWARE\MPU6050\eMPL\inv_mpu_dmp_motion_driver.h
 ..\obj\delay.o: ..\HARDWARE\KEY\key.h
 ..\obj\delay.o: ..\HARDWARE\LED\led.h
+..\obj\delay.o: ..\HARDWARE\ADC\adc.h

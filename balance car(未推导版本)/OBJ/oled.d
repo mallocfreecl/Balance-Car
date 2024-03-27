@@ -46,5 +46,6 @@
 ..\obj\oled.o: ..\HARDWARE\MPU6050\eMPL\inv_mpu_dmp_motion_driver.h
 ..\obj\oled.o: ..\HARDWARE\KEY\key.h
 ..\obj\oled.o: ..\HARDWARE\LED\led.h
+..\obj\oled.o: ..\HARDWARE\ADC\adc.h
 ..\obj\oled.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
 ..\obj\oled.o: ..\HARDWARE\OLED\oledfont.h
