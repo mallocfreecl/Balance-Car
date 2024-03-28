@@ -3,7 +3,7 @@
 ..\obj\oled.o: ..\SYSTEM\sys\sys.h
 ..\obj\oled.o: ..\USER\stm32f10x.h
 ..\obj\oled.o: ..\CORE\core_cm3.h
-..\obj\oled.o: D:\keil\ARM\ARMCC\Bin\..\include\stdint.h
+..\obj\oled.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 ..\obj\oled.o: ..\USER\system_stm32f10x.h
 ..\obj\oled.o: ..\USER\stm32f10x_conf.h
 ..\obj\oled.o: ..\STM32F10x_FWLib\inc\stm32f10x_adc.h
@@ -33,7 +33,7 @@
 ..\obj\oled.o: ..\SYSTEM\delay\delay.h
 ..\obj\oled.o: ..\SYSTEM\sys\sys.h
 ..\obj\oled.o: ..\SYSTEM\usart\usart.h
-..\obj\oled.o: D:\keil\ARM\ARMCC\Bin\..\include\stdio.h
+..\obj\oled.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 ..\obj\oled.o: ..\HARDWARE\OLED\oled.h
 ..\obj\oled.o: ..\HARDWARE\EXTI\exti.h
 ..\obj\oled.o: ..\HARDWARE\ENCODER\encoder.h
@@ -44,5 +44,5 @@
 ..\obj\oled.o: ..\HARDWARE\MPU6050\mpuiic.h
 ..\obj\oled.o: ..\HARDWARE\MPU6050\eMPL\inv_mpu.h
 ..\obj\oled.o: ..\HARDWARE\MPU6050\eMPL\inv_mpu_dmp_motion_driver.h
-..\obj\oled.o: D:\keil\ARM\ARMCC\Bin\..\include\stdlib.h
+..\obj\oled.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
 ..\obj\oled.o: ..\HARDWARE\OLED\oledfont.h
