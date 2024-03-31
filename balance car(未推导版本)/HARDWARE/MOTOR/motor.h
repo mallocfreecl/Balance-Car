@@ -7,8 +7,8 @@
 #define Ain1 PBout(13)    //A电机的控制线
 #define Ain2 PBout(12)
 
-#define Bin1 PBout(15)    //B电机的控制线
-#define Bin2 PBout(14)
+#define Bin1 PBout(14)    //B电机的控制线
+#define Bin2 PBout(15)
 
 void Motor_Init(void);
 void Limit(int* MOTORA,int* MOTORB);
