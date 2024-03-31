@@ -14,16 +14,15 @@
 //All rights reserved									  
 //////////////////////////////////////////////////////////////////////////////////
 	   		   
-//IO方向设置
+//IO方向设置           //注意：使用该IIC文件，不仅要改.h文件的配置，还要在.c文件中修改为GPIO的相应引脚
 
 //GPIO的CR寄存器，用于配置GPIO的模式与输出速度，4个位决定一个GPIO.x的模式
 //CRL(32位)决定GPIO.0-GPIO.7这8个端口的模式  CRH(32位)决定GPIO.8-GPIO.15这8个端口的模式
 //1.现将4位清零  2.设置对应的模式  
 
 
-#define MPU_SDA_IN()   {GPIOB->CRL&=0X0FFFFFFF;GPIOB->CRL|=8<<28;}
-#define MPU_SDA_OUT()  {GPIOB->CRL&=0X0FFFFFFF;GPIOB->CRL|=3<<28;}
-
+#define MPU_SDA_IN()   {GPIOB->CRL&=0X0FFFFFFF;GPIOB->CRL|=(uint32_t)8<<28;} //(uint32_t)加不加都行
+#define MPU_SDA_OUT()  {GPIOB->CRL&=0X0FFFFFFF;GPIOB->CRL|=(uint32_t)3<<28;}
 
 //#define MPU_SDA_IN()   {GPIOB->CRL&=0XFFFF0FFF;GPIOB->CRL|=8<<12;}
 //#define MPU_SDA_OUT()  {GPIOB->CRL&=0XFFFF0FFF;GPIOB->CRL|=3<<12;}

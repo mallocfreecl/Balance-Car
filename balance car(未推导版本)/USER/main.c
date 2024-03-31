@@ -11,6 +11,8 @@ int Enconder_Left,Enconder_Right;
 int PWM_MAX=7200,PWM_MIN=-7200;
 int MOTOR1,MOTOR2;
 
+uint16_t temp;
+
 int main(void)
 {
 	NVIC_PriorityGroupConfig(NVIC_PriorityGroup_2);//最好只在main函数中只进行一次分组
@@ -19,6 +21,7 @@ int main(void)
 	 
 	led_init();
 	key_init();
+	AD_Init();
 	
 	OLED_Init();
 	OLED_Clear();
@@ -34,10 +37,62 @@ int main(void)
 	
 	while(1)
 	{
-		OLED_Float(0,0,Pitch,1);
-		OLED_Float(50,50,velocity_out,1);
-//		OLED_ShowNumber(30,0,Velocity_out,3,16);//OK
+		
+
+//按键测试            测试正常
+//使用按键控制LED
+//		if(KEY_Scan(0) == 1)
+//		{	
+//			if(temp) 
+//			{
+//				LED1 = 0; 
+//			}
+//			else
+//			{
+//				LED1 = 1;
+//			}
+//			temp = !temp;
+//		
+//		}
+		
+//LED、Delay代码测试	  测试正常	
+//亮1.5s,灭1.5s
+//		LED1 = 0;
+//		delay_ms(1500);//delay函数没有问题，不要超过1864
+//		LED1 = 1;
+//		delay_ms(1500);
+
+
+//OLED代码测试	        测试正常	
+//OLED测试   
+		  OLED_Float(0,0,Pitch,1);
+			OLED_Float(2,0,Enconder_Left,1);
+			OLED_Float(4,0,Enconder_Right,1);
+//		OLED_Float(2,0,Get_battery_volt(),1);     //ADC测试正常
+//		OLED_Float(4,0,MPU_Read_Byte(MPU_DEVICE_ID_REG),1);
+//		OLED_Float(2,0,velocity_out,1);
+//		OLED_ShowNumber(0,10,velocity_out,3,16);//注意是x,y
+//		delay_ms(50);
+	
+
+//UART1串口测试         测试正常
+//		uint16_t len,i;
+//		if (USART_RX_STA & 0x8000) /* 接收到了数据? */ 
+//		 { 
+//		 len = USART_RX_STA & 0x3fff; /* 得到此次接收到的数据长度 */ 
+//		 printf("\r\n 您发送的消息为:\r\n"); 
+//		 
+//		/*发送接收到的数据*/ 
+//			for(i = 0; i <= len; i++)
+//			{
+//				USART_SendData(USART1,USART_RX_BUF[i]);
+//				while(USART_GetFlagStatus(USART1,USART_FLAG_TC)!=SET);//等待发送结束
+//			}
+//		 printf("\r\n\r\n"); /* 插入换行 */ 
+//		 USART_RX_STA = 0; 
+//		 } 
 	 }
 
  }
 
+ 

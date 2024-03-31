@@ -24,11 +24,11 @@ void AD_Init(void)
 	/*GPIO初始化*/
 	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AIN;
 	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_0;
-	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
+	//GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
 	GPIO_Init(GPIOB, &GPIO_InitStructure);					//将PB0引脚初始化为模拟输入
 	
 	/*规则组通道配置*/
-	ADC_RegularChannelConfig(ADC1, ADC_Channel_8, 1, ADC_SampleTime_55Cycles5);		//规则组序列1的位置，配置为通道0
+	ADC_RegularChannelConfig(ADC1, ADC_Channel_8, 1, ADC_SampleTime_55Cycles5);		//规则组序列1的位置，配置为通道8
 	
 	/*ADC初始化*/
 	ADC_InitStructure.ADC_Mode = ADC_Mode_Independent;		//模式，选择独立模式，即单独使用ADC1
@@ -59,4 +59,16 @@ uint16_t AD_GetValue(void)
 	ADC_SoftwareStartConvCmd(ADC1, ENABLE);					//软件触发AD转换一次
 	while (ADC_GetFlagStatus(ADC1, ADC_FLAG_EOC) == RESET);	//等待EOC标志位，即等待AD转换结束
 	return ADC_GetConversionValue(ADC1);					//读数据寄存器，得到AD转换的结果
+}
+
+/**************************************************************************
+函数功能：读取电池电压 
+入口参数：无
+返回  值：电池电压 单位MV
+**************************************************************************/
+float	Get_battery_volt(void)   
+{  
+	float Volt;
+	Volt=AD_GetValue()*3.3*11/4096;
+	return Volt;
 }

@@ -70,8 +70,9 @@ void EXTI9_5_IRQHandler(void) //检测到mpu6050的下降沿信号
 {
  if( EXTI_GetITStatus(EXTI_Line5) == SET) 
  {
-	 if(PBout(5) == 0) //二次检测，检测到引脚电平为低
+	 if(PBin(5) == 0) //二次检测，检测到引脚电平为低      //检测输入应该是PBin(5)而不是PBout(5)
 	 {
+		USART_SendData(USART1,0x88);
 	  EXTI_ClearITPendingBit(EXTI_Line5);//中断标志位清零
 	  //1、采集编码器数据及MPU6050的数据
 		Enconder_Left = - Get_Speed(2);  //接的是A编码器接口
@@ -93,6 +94,8 @@ void EXTI9_5_IRQHandler(void) //检测到mpu6050的下降沿信号
 		MOTOR2 = PWM_out + Turn_out;
 		Limit(&MOTOR1,&MOTOR2);
 		Load(MOTOR1,MOTOR2);
+		
+//		Load(360,720);   //编码器与PWM输出正常
 	 }
  }
 }

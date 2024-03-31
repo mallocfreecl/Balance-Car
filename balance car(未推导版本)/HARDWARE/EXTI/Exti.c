@@ -39,8 +39,8 @@ void MPU6050_Exti_Init(void)
 	//5、配置NVIC   
 	NVIC_InitStructure.NVIC_IRQChannel=EXTI9_5_IRQn;
 	NVIC_InitStructure.NVIC_IRQChannelCmd=ENABLE;
-	NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority=0;
-	NVIC_InitStructure.NVIC_IRQChannelSubPriority=0;	   //外部中断优先级设为最高，该中断不可被打断
+	NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority=1;
+	NVIC_InitStructure.NVIC_IRQChannelSubPriority=1;	   //外部中断优先级设为最高，该中断不可被打断
 	NVIC_Init(&NVIC_InitStructure);
 }
 

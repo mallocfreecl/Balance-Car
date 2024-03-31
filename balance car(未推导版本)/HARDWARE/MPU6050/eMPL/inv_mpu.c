@@ -2979,7 +2979,7 @@ u8 mpu_dmp_init(void)
 		res=mpu_set_dmp_state(1);	//使能DMP
 		if(res)return 9;     
 	}else return 10;
-	//return 0;
+	return 0;
 }
 //得到dmp处理后的数据(注意,本函数需要比较多堆栈,局部变量有点多)
 //pitch:俯仰角 精度:0.1°   范围:-90.0° <---> +90.0°

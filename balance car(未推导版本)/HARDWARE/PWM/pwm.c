@@ -15,7 +15,7 @@ void PWM_TIM1_Init(u16 Psc,u16 Per)
 	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA |RCC_APB2Periph_TIM1, ENABLE);
 	
 	//2、初始化GPIO
-	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_8 |GPIO_Pin_11;     //PA8、PA11   TIM1的CH1和CH4
+	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_8 | GPIO_Pin_11;     //PA8、PA11   TIM1的CH1和CH4
 	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF_PP;            //复用推挽输出
 	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
 	GPIO_Init(GPIOA, &GPIO_InitStructure);

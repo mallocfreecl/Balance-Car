@@ -6,5 +6,6 @@
 
 void AD_Init(void);
 uint16_t AD_GetValue(void);
+float	Get_battery_volt(void);
 
 #endif
