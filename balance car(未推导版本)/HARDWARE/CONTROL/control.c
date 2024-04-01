@@ -1,12 +1,14 @@
 #include "control.h"
 
-//该程序默认机械中值为0
-float Med_Angle = 0; //机械中值  根据实际情况改变机械中值
+//该程序默认机械中值(-2)+(-4)/2 = -3
+float Med_Angle = -3; //机械中值  根据实际情况改变机械中值
 float Target_Speed = 0; //二次开发，期望速度
 
 
-float Vertical_Kp,Vertical_Kd; //直立环Kp、Kd
-float Velocity_Kp,Velocity_Ki; //速度环Kp、Ki
+float Vertical_Kp,
+	    Vertical_Kd; //直立环Kp、Kd
+float Velocity_Kp,
+	    Velocity_Ki; //速度环Kp、Ki
 float Turn_Kp;
 
 int vertical_out,velocity_out,Turn_out,PWM_out; //直立环输出、速度环输出、转向环
