@@ -1,12 +1,12 @@
 #include "control.h"
 
-//该程序默认机械中值(-2)+(-4)/2 = -3
+//该程序默认机械中值(-2)+(-4)/2 = -3   (-2) + (-2) /2 = -2
 float Med_Angle = -3; //机械中值  根据实际情况改变机械中值
 float Target_Speed = 0; //二次开发，期望速度
 
 
-float Vertical_Kp,
-	    Vertical_Kd; //直立环Kp、Kd
+float Vertical_Kp = -380,    //-360出现低幅震荡，-380出现大幅震荡
+	    Vertical_Kd = -0.8; //直立环Kp、Kd   //0.8 直立效果较好，但没有出现高频震动
 float Velocity_Kp,
 	    Velocity_Ki; //速度环Kp、Ki
 float Turn_Kp;
