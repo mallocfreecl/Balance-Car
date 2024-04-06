@@ -5,10 +5,10 @@ float Med_Angle = -3; //机械中值  根据实际情况改变机械中值
 float Target_Speed = 0; //二次开发，期望速度
 
 
-float Vertical_Kp = -380,    //-360出现低幅震荡，-380出现大幅震荡
-	    Vertical_Kd = -0.8; //直立环Kp、Kd   //0.8 直立效果较好，但没有出现高频震动
-float Velocity_Kp,
-	    Velocity_Ki; //速度环Kp、Ki
+float Vertical_Kp = -228,    //-360出现低幅震荡，-380出现大幅震荡    乘0.6后(-228  -0.72)
+	    Vertical_Kd = -0.72;    //直立环Kp、Kd   //-0.8 直立效果较好，但没有出现高频震动  -1.0出现轻微抖动  -1.2出现剧烈抖动
+float Velocity_Kp = -0.33,
+	    Velocity_Ki = -0.0015;   //速度环Kp、Ki    -0.4 -0.002 会在原地小幅度摇摆  -0.35 -0.175 也会小幅度摇摆  0.2不可取
 float Turn_Kp;
 
 int vertical_out,velocity_out,Turn_out,PWM_out; //直立环输出、速度环输出、转向环
