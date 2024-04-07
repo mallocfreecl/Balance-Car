@@ -9,7 +9,7 @@ float Vertical_Kp = -228,    //-360出现低幅震荡，-380出现大幅震荡    乘0.6后(-22
 	    Vertical_Kd = -0.72;    //直立环Kp、Kd   //-0.8 直立效果较好，但没有出现高频震动  -1.0出现轻微抖动  -1.2出现剧烈抖动
 float Velocity_Kp = -0.33,
 	    Velocity_Ki = -0.0015;   //速度环Kp、Ki    -0.4 -0.002 会在原地小幅度摇摆  -0.35 -0.175 也会小幅度摇摆  0.2不可取
-float Turn_Kp;
+float Turn_Kp = 1.3;
 
 int vertical_out,velocity_out,Turn_out,PWM_out; //直立环输出、速度环输出、转向环
 
@@ -94,6 +94,7 @@ void EXTI9_5_IRQHandler(void) //检测到mpu6050的下降沿信号
 		MOTOR1 = PWM_out - Turn_out;
 		MOTOR2 = PWM_out + Turn_out;
 		Limit(&MOTOR1,&MOTOR2);
+		Turn_Off(Pitch,12);   //角度异常或电压过低关闭电机   第二个参数应是实时读取的电压值，暂时写12屏蔽
 		Load(MOTOR1,MOTOR2);
 		
 //    Load(360,720);   //编码器与PWM输出正常     左轮向后旋转(速度720)，右轮向后旋转(速度360)

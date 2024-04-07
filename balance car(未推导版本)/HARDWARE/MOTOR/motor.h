@@ -14,5 +14,6 @@ void Motor_Init(void);
 void Limit(int* MOTORA,int* MOTORB);
 int GFP_abs(int num);
 void Load(int motor1,int motor2);
+void Turn_Off(float angle, float voltage);
 
 #endif
